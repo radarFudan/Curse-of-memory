@@ -1,3 +1,4 @@
+import os
 from typing import List, Optional, Tuple
 
 import hydra
@@ -6,7 +7,7 @@ import pyrootutils
 import torch
 from lightning import Callback, LightningDataModule, LightningModule, Trainer
 from lightning.pytorch.loggers import Logger
-from omegaconf import DictConfig
+from omegaconf import DictConfig, OmegaConf
 
 pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 # ------------------------------------------------------------------------------------ #
@@ -29,6 +30,9 @@ pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 from src import utils
 
 log = utils.get_pylogger(__name__)
+
+OmegaConf.register_new_resolver("eval", eval)
+OmegaConf.register_new_resolver("div_up", lambda x, y: (x + y - 1) // y)
 
 
 @utils.task_wrapper
@@ -82,6 +86,9 @@ def train(cfg: DictConfig) -> Tuple[dict, dict]:
         log.info("Compiling model!")
         model = torch.compile(model)
 
+    print("Running validation before training")
+    trainer.validate(model=model, datamodule=datamodule)
+
     if cfg.get("train"):
         log.info("Starting training!")
         trainer.fit(model=model, datamodule=datamodule, ckpt_path=cfg.get("ckpt_path"))
@@ -94,13 +101,20 @@ def train(cfg: DictConfig) -> Tuple[dict, dict]:
         if ckpt_path == "":
             log.warning("Best ckpt not found! Using current weights for testing...")
             ckpt_path = None
+
+        # Update the final validation/test loss with best ckpt
+        trainer.validate(model=model, datamodule=datamodule, ckpt_path=ckpt_path)
+        val_metrics = trainer.callback_metrics
         trainer.test(model=model, datamodule=datamodule, ckpt_path=ckpt_path)
         log.info(f"Best ckpt path: {ckpt_path}")
+
+        with open("ckpt_path.txt", "w") as f:
+            f.write(str(ckpt_path))
 
     test_metrics = trainer.callback_metrics
 
     # merge train and test metrics
-    metric_dict = {**train_metrics, **test_metrics}
+    metric_dict = {**train_metrics, **val_metrics, **test_metrics}
 
     return metric_dict, object_dict
 
@@ -120,8 +134,15 @@ def main(cfg: DictConfig) -> Optional[float]:
     )
 
     # return optimized metric
+    print("metric value", metric_value)  # expected to be val loss
+
+    with open("metric_value.txt", "w") as f:
+        f.write(str(metric_value * 0.5))
+
     return metric_value
 
 
 if __name__ == "__main__":
+    torch.set_float32_matmul_precision("high")  # to avoid some noise message
+
     main()
