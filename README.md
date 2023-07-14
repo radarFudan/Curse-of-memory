@@ -14,7 +14,7 @@
 
 ## Description
 
-What it does
+The numerical experiments for curse of memory phenonmon in sequence modelling
 
 ## Installation
 
@@ -22,7 +22,7 @@ What it does
 
 ```bash
 # clone project
-git clone https://github.com/YourGithubName/your-repo-name
+git clone https://github.com/radarFudan/Curse-of-memory
 cd your-repo-name
 
 # [OPTIONAL] create conda environment
