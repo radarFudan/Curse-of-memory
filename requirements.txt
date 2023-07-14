@@ -1,7 +1,8 @@
 # --------- pytorch --------- #
 torch>=2.0.0
 torchvision>=0.15.0
-lightning>=2.0.0
+# lightning>=2.0.0
+lightning==2.0.2 # 2.0.4 is problematic
 torchmetrics>=0.11.4
 
 # --------- hydra --------- #
@@ -21,4 +22,8 @@ pyrootutils     # standardizing the project root setup
 pre-commit      # hooks for applying linters on commit
 rich            # beautiful text formatting in terminal
 pytest          # tests
-# sh            # for running bash commands in some tests (linux/macos only)
+sh            # for running bash commands in some tests (linux/macos only)
+
+matplotlib      # for plotting
+ipykernel
+einops

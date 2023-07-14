@@ -14,7 +14,7 @@
 
 ## Description
 
-The numerical experiments for curse of memory phenonmon in sequence modelling
+The numerical experiments for curse of memory phenomenon in sequence modelling
 
 ## Installation
 
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 ```bash
 # clone project
-git clone https://github.com/YourGithubName/your-repo-name
+git clone https://github.com/radarFudan/Curse-of-memory
 cd your-repo-name
 
 # create conda environment and install dependencies
