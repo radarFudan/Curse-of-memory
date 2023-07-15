@@ -2,7 +2,7 @@
 
 cd ./wsd/Curse-of-memory
 
-pip install -r requirements.txt
+pip install -r requirements.txt --upgrade
 
 wandb offline
 
