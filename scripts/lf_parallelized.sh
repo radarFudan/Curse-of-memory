@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# activation_list=("linear" "hardtanh" "tanh") # recurrent activation
-# model_list=("diagonalrnn" "rnn" "softplusrnn") # parameterization method
-# rho_name_list=("exp" "pol")
+activation_list=("linear" "hardtanh" "tanh") # recurrent activation
+model_list=("diagonalrnn" "rnn" "softplusrnn") # parameterization method
+rho_name_list=("exp" "pol")
 
 # Debug
-activation_list=("linear") 
-model_list=("diagonalrnn") 
-rho_name_list=("exp")
+# activation_list=("linear") 
+# model_list=("diagonalrnn") 
+# rho_name_list=("exp")
 
 train_and_perturb() {
     activation=$1
