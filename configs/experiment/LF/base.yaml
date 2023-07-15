@@ -13,7 +13,7 @@ data:
 tags: ["lf"]
 
 trainer:
-  min_epochs: 5 # Previous set to 1, some might not have suitable stability margin
+  min_epochs: 2 # Previous set to 1, some might not have suitable stability margin
   max_epochs: 1000
   gradient_clip_val: 0.5
 

@@ -27,7 +27,7 @@ do
                     python src/train.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}" callbacks.early_stopping.stopping_threshold="${metric_value[-1]}" logger=many_loggers
 
                     ckpt_path+=("$(cat ckpt_path.txt)")
-                    echo ${ckpt_path[-1]} >> $ckpt_path_file
+                    echo "${ckpt_path[-1]}" >> "$ckpt_path_file"
 
                     metric_value+=("$(cat metric_value.txt)")
                     echo "Ensure approximation: "
@@ -38,7 +38,7 @@ do
                 while IFS= read -r line
                 do
                     ckpt_path+=("$line")
-                done < $ckpt_path_file
+                done < "$ckpt_path_file"
             fi
 
 

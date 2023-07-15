@@ -38,3 +38,5 @@ logger:
     group: "mnist"
   aim:
     experiment: "mnist"
+
+optimized_metric: "val/loss"
