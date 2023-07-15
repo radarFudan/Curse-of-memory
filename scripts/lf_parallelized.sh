@@ -1,10 +1,13 @@
 #!/bin/bash
 
-activation_list=("linear" "hardtanh" "tanh") # recurrent activation
-model_list=("diagonalrnn" "rnn" "softplusrnn") # parameterization method
-rho_name_list=("exp" "pol")
+# activation_list=("linear" "hardtanh" "tanh") # recurrent activation
+# model_list=("diagonalrnn" "rnn" "softplusrnn") # parameterization method
+# rho_name_list=("exp" "pol")
 
-rec1_size_list=("8" "16" "32" "64")
+# Debug
+activation_list=("linear") 
+model_list=("diagonalrnn") 
+rho_name_list=("exp")
 
 train_and_perturb() {
     activation=$1
@@ -17,8 +20,8 @@ train_and_perturb() {
     log_dir_path="logs/${task_name}/runs/"
 
     rec1_size_list=("8" "16" "32" "64")
+    # rec1_size_list=("8") # Debug
     metric_value=("100")
-    ckpt_path=()
     ckpt_path_file="${log_dir_path}/ckpt_path.txt"
     trained=False
 
@@ -27,25 +30,26 @@ train_and_perturb() {
 
     if [ "$trained" = False ]
     then
-        for i in "${!rec1_sizes[@]}"
+        for i in "${!rec1_size_list[@]}"
         do
             python src/train.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}" callbacks.early_stopping.stopping_threshold="${metric_value[-1]}" logger=many_loggers
 
-            ckpt_path+=("$(cat ckpt_path.txt)")
-            echo "${ckpt_path[-1]}" >> "$ckpt_path_file"
-
-            metric_value+=("$(cat metric_value.txt)")
+            metric_value+=("$(cat "${log_dir_path}/metric_value.txt")")
             echo "Ensure approximation: "
             echo "${metric_value[@]}"
         done
     else
         echo "The model is already trained."
-        while IFS= read -r line
-        do
-            ckpt_path+=("$line")
-        done < "$ckpt_path_file"
     fi
 
+    # Read checkpoint paths
+    ckpt_path=()
+    while IFS= read -r line
+    do
+        ckpt_path+=("$line")
+    done < "$ckpt_path_file"
+
+    echo "ckpt_path: ${ckpt_path[@]}"
 
     for i in "${!rec1_size_list[@]}"
     do
@@ -56,4 +60,4 @@ train_and_perturb() {
 export -f train_and_perturb
 
 # shellcheck disable=SC1083
-parallel train_and_perturb {1} {2} {3} "${rec1_size_list[*]}" ::: "${activation_list[@]}" ::: "${model_list[@]}" ::: "${rho_name_list[@]}"
+parallel train_and_perturb {1} {2} {3} ::: "${activation_list[@]}" ::: "${model_list[@]}" ::: "${rho_name_list[@]}"

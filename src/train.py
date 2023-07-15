@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from typing import List, Optional, Tuple
 
 import hydra
@@ -108,8 +109,12 @@ def train(cfg: DictConfig) -> Tuple[dict, dict]:
         trainer.test(model=model, datamodule=datamodule, ckpt_path=ckpt_path)
         log.info(f"Best ckpt path: {ckpt_path}")
 
-        with open("ckpt_path.txt", "w") as f:
-            f.write(str(ckpt_path))
+        storage_dir = Path(cfg.paths.get("output_dir"))
+        storage_dir = storage_dir.parent.absolute()
+        storage_dir = storage_dir.parent.absolute()
+
+        with open(os.path.join(storage_dir, "ckpt_path.txt"), "a") as f:
+            f.write(str(ckpt_path) + "\n")
 
     test_metrics = trainer.callback_metrics
 
@@ -136,8 +141,12 @@ def main(cfg: DictConfig) -> Optional[float]:
     # return optimized metric
     print("metric value", metric_value)  # expected to be val loss
 
-    with open("metric_value.txt", "w") as f:
-        f.write(str(metric_value * 0.5))
+    storage_dir = Path(cfg.paths.get("output_dir"))
+    storage_dir = storage_dir.parent.absolute()
+    storage_dir = storage_dir.parent.absolute()
+
+    with open(os.path.join(storage_dir, "metric_value.txt"), "w") as f:
+        f.write(str(metric_value * 0.5) + "\n")
 
     return metric_value
 
