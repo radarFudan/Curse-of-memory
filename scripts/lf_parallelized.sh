@@ -17,7 +17,7 @@ train_and_perturb() {
     experiment="LF/lf-${model}"
 
     task_name="LF_${activation}_${model}_${rho_name}"
-    log_dir_path="logs/${task_name}/runs/"
+    log_dir_path="logs/${task_name}/runs"
 
     rec1_size_list=("8" "16" "32" "64")
     metric_value=("100")

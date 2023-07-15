@@ -110,8 +110,13 @@ class LFDataModule(LightningDataModule):
         """
         # load and split datasets only if not loaded already
         if not self.data_train and not self.data_val and not self.data_test:
-            inputs = np.load(self.hparams.data_dir + f"lf_{self.rho_name}_inputs.npy")
-            outputs = np.load(self.hparams.data_dir + f"lf_{self.rho_name}_outputs.npy")
+            print("In lf_datamodule.py, self.rho_name", self.rho_name)
+
+            inputs = np.load(self.hparams.data_dir + f"lf_{self.rho_name}_inputs.npy", "r")
+            outputs = np.load(self.hparams.data_dir + f"lf_{self.rho_name}_outputs.npy", "r")
+
+            # print("In lf_datamodule.py, inputs.shape", inputs.shape)
+            # print("In lf_datamodule.py, outputs.shape", outputs.shape)
 
             dataset = torch.utils.data.TensorDataset(
                 torch.from_numpy(inputs).float(),
