@@ -22,12 +22,12 @@ train_and_perturb() {
     ckpt_path_file="${log_dir_path}/ckpt_path.txt"
     trained=False
 
-    gpu_index=$((($PARALLEL_SEQ-1)%4))  # Cycle through GPU indices 0,1,2,3
+    gpu_index=$(((PARALLEL_SEQ-1)%4))  # Cycle through GPU indices 0,1,2,3
     export CUDA_VISIBLE_DEVICES=$gpu_index  # Set CUDA_VISIBLE_DEVICES for this job
 
     if [ "$trained" = False ]
     then
-        for i in "${!rec1_size_list[@]}"
+        for i in "${!rec1_sizes[@]}"
         do
             python src/train.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}" callbacks.early_stopping.stopping_threshold="${metric_value[-1]}" logger=many_loggers
 
@@ -55,4 +55,5 @@ train_and_perturb() {
 
 export -f train_and_perturb
 
+# shellcheck disable=SC1083
 parallel train_and_perturb {1} {2} {3} "${rec1_size_list[*]}" ::: "${activation_list[@]}" ::: "${model_list[@]}" ::: "${rho_name_list[@]}"
