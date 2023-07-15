@@ -4,7 +4,7 @@ defaults:
   - _self_
   - data: lf.yaml
   - model: lf.yaml
-  - callbacks: default.yaml
+  - callbacks: null
   - logger: null
   - trainer: default.yaml
   - paths: default.yaml
