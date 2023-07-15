@@ -1,7 +1,13 @@
 #!/bin/bash
 
-activation_list=("linear" "hardtanh" "tanh") # recurrent activation
-model_list=("diagonalrnn" "rnn" "softplusrnn") # parameterization method
+# full
+# activation_list=("linear" "hardtanh" "tanh") # recurrent activation
+# model_list=("diagonalrnn" "rnn" "softplusrnn") # parameterization method
+# rho_name_list=("exp" "pol")
+
+# Debug, two process
+activation_list=("linear") 
+model_list=("diagonalrnn") 
 rho_name_list=("exp" "pol")
 
 # Debug
@@ -51,9 +57,9 @@ train_and_perturb() {
 
     echo "ckpt_path: ${ckpt_path[@]}"
 
-    for i in "${!rec1_size_list[@]}"
+    for i in "${!ckpt_path[@]}"
     do
-        python src/perturb.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}_PERTURB" ckpt_path="${ckpt_path[$i]}" +model.net.training=False +perturb_range=21 +perturb_repeats=3 +perturbation_interval=0.5
+        python src/perturb.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}_PERTURB" logger=many_loggers ckpt_path="${ckpt_path[$i]}" +model.net.training=False +perturb_range=21 +perturb_repeats=3 +perturbation_interval=0.5
     done
 }
 
