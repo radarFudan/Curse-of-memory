@@ -1,5 +1,7 @@
 #!/bin/bash
 
-pip install -r ./wsd/Curse-of-memory/requirements.txt
+cd ./wsd/Curse-of-memory
+
+pip install -r requirements.txt
 
 bash scripts/lf_exp.sh
