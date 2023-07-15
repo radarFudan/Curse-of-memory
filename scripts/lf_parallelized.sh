@@ -7,7 +7,7 @@
 
 # Debug, two process
 activation_list=("linear")
-model_list=("diagonalrnn")
+model_list=("diagonalrnn" "rnn" "softplusrnn")
 rho_name_list=("exp" "pol")
 
 train_and_perturb() {

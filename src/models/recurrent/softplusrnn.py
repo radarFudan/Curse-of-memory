@@ -15,10 +15,12 @@ class CustomLinearLayer(nn.Module):
         self.weight = nn.Parameter(torch.randn(size, dtype=dtype))
         self.training = training
 
-        if self.training:
-            self.activation = F.softplus
-        else:
-            self.activation = torch.nn.Identity()
+        # if self.training:
+        #     self.activation = F.softplus
+        # else:
+        #     self.activation = torch.nn.Identity()
+
+        self.activation = F.softplus
 
     def forward(self, x):
         # Create a diagonal matrix
