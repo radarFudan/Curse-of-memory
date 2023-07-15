@@ -50,10 +50,10 @@ Graph 4(pol + linear Softplus RNN)
 ## Models
 
 Discrete case:
-$$h\_{k+1} = h_k + \\Delta t\\sigma(Wh_k+Ux_k)$$
+$$h_{k+1} = h_k + \Delta t\sigma(Wh_k+Ux_k)$$
 
 Continuous case:
-$$\\frac{dh\_{t}}{dt} = \\sigma(Wh_k+Ux_k)$$
+$$\frac{dh_{t}}{dt} = \sigma(Wh_k+Ux_k)$$
 
 The discrete case can be viewed as an Euler method for the continuous dynamical system.
 
