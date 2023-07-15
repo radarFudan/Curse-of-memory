@@ -96,13 +96,13 @@ conda activate myenv
 python src/train.py experiment=Lf/lf-rnn.yaml
 ```
 
-## Memory function evaluation
+### Memory function evaluation
 
 ```bash
 python src/memory.py experiment=Lf/lf-rnn.yaml
 ```
 
-## Perturbation error evaluation
+### Perturbation error evaluation
 
 ```bash
 python src/perturb.py experiment=Lf/lf-rnn.yaml
