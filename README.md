@@ -22,14 +22,18 @@ Using stable parameterisation such as softplus parameterisation can relax the cu
 
 ### Curse of memory in linear RNNs
 
-![Fig1_exp](assets/perturbation_error_exp_None.png "Exponential decaying memory can be stably approximated")
-![Fig1_pol](assets/perturbation_error_pol_None.png "Polynomial decaying memory cannot be stably approximated")
+Let $m$ be the hidden dimension.
+
+| Exponential decaying memory can be stably approximated | Polynomial decaying memory cannot be stably approximated |
+|:-------------------------------------------------------:|:-------------------------------------------------------:|
+| ![Exponential decaying memory can be stably approximated](assets/perturbation_error_exp_None.png) | ![Polynomial decaying memory cannot be stably approximated](assets/perturbation_error_pol_None.png) |
+
 
 ### Curse of memory in nonlinear RNNs
 
 To add
 
-### Proper parameterization enables stable approximation
+### Proper parameterization enables stable approximation for long memory
 
 | Parameterisation        | Exp    | Pol      |
 | ----------------------- | ------ | -------- |
@@ -37,15 +41,10 @@ To add
 | Vanilla RNN             | Stable | Unstable |
 | Stable Parameterisation | Stable | Stable   |
 
-Notice that here
-
-Graph 3(pol + linear RNN)
 
 ![Fig3_unstable](logs/LF_linear_rnn_pol_PERTURB/runs/20230715/perturbation_error.png)
 
 <!-- ![Fig3_stable](logs/LF_linear_softplusrnn_pol_PERTURB/runs/20230715/perturbation_error.png) -->
-
-Graph 4(pol + linear Softplus RNN)
 
 ## Models
 
