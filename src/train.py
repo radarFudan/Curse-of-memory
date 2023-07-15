@@ -145,8 +145,9 @@ def main(cfg: DictConfig) -> Optional[float]:
     storage_dir = storage_dir.parent.absolute()
     storage_dir = storage_dir.parent.absolute()
 
-    with open(os.path.join(storage_dir, "metric_value.txt"), "w") as f:
-        f.write(str(metric_value * 0.5) + "\n")
+    if metric_value is not None:
+        with open(os.path.join(storage_dir, "metric_value.txt"), "w") as f:
+            f.write(str(metric_value * 0.5) + "\n")
 
     return metric_value
 

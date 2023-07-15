@@ -10,11 +10,6 @@ activation_list=("linear")
 model_list=("diagonalrnn")
 rho_name_list=("exp" "pol")
 
-# Debug
-# activation_list=("linear")
-# model_list=("diagonalrnn")
-# rho_name_list=("exp")
-
 train_and_perturb() {
     activation=$1
     model=$2
@@ -25,7 +20,6 @@ train_and_perturb() {
     log_dir_path="logs/${task_name}/runs/"
 
     rec1_size_list=("8" "16" "32" "64")
-    # rec1_size_list=("8") # Debug
     metric_value=("100")
     ckpt_path_file="${log_dir_path}/ckpt_path.txt"
     trained=False
