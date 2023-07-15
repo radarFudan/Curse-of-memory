@@ -60,4 +60,4 @@ train_and_perturb() {
 export -f train_and_perturb
 
 # shellcheck disable=SC1083
-parallel train_and_perturb {1} {2} {3} ::: "${activation_list[@]}" ::: "${model_list[@]}" ::: "${rho_name_list[@]}"
+parallel -j 8 train_and_perturb {1} {2} {3} ::: "${activation_list[@]}" ::: "${model_list[@]}" ::: "${rho_name_list[@]}"
