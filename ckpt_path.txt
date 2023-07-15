@@ -1,0 +1,1 @@
+/home/shida/Curse-of-memory/logs/LF_linear_softplusrnn_exp/runs/20230715/093356/checkpoints/epoch_010.ckpt

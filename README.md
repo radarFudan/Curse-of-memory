@@ -14,7 +14,41 @@
 
 ## Description
 
-The numerical experiments for curse of memory phenomenon in sequence modelling
+In this paper, we study the curse of memory phenomenon of RNNs in sequence modelling.
+
+It is shown that, simply adding nonlinear activation such as hardtanh and tanh does not relax the phenomenon.
+
+Using stable parameterisation such as softplus parameterisation can relax the curse of memory and achieve stable approximation.
+
+### Activation does not relax curse of memory
+
+Graph 1(exp + hardtanh RNN)
+
+Graph 2(pol + hardtanh RNN)
+
+### Proper parameterization enables stable approximation
+
+| Parameterisation        | Exp    | Pol      |
+| ----------------------- | ------ | -------- |
+| Diagonal RNN            | Stable | Unstable |
+| Vanilla RNN             | Stable | Unstable |
+| Stable Parameterisation | Stable | Stable   |
+
+Notice that here
+
+Graph 3(pol + linear Exp RNN)
+
+Graph 4(pol + linear Softplus RNN)
+
+## Models
+
+Discrete case:
+$$h\_{k+1} = h_k + \\Delta t\\sigma(Wh_k+Ux_k)$$
+
+Continuous case:
+$$\\frac{dh\_{t}}{dt} = \\sigma(Wh_k+Ux_k)$$
+
+The discrete case can be viewed as an Euler method for the continuous dynamical system.
 
 ## Installation
 
@@ -50,8 +84,20 @@ conda env create -f environment.yaml -n myenv
 conda activate myenv
 ```
 
-## How to run
+## How to train
 
 ```bash
 python src/train.py experiment=Lf/lf-rnn.yaml
+```
+
+## Memory function evaluation
+
+```bash
+python src/memory.py experiment=Lf/lf-rnn.yaml
+```
+
+## Perturbation error evaluation
+
+```bash
+python src/perturb.py experiment=Lf/lf-rnn.yaml
 ```

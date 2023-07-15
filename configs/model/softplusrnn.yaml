@@ -1,0 +1,34 @@
+# defaults:
+#   - /model/optimizer/adamW.yaml
+#   - /model/scheduler/reduceLROnPlateau.yaml
+
+_target_: src.models.lf_module.LFLitModule
+
+optimizer:
+  _target_: torch.optim.AdamW
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.0
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  _partial_: true
+  mode: min
+  factor: 0.1
+  patience: 10
+
+net:
+  _target_: src.models.recurrent.softplusrnn.SoftplusRNN
+  rec1_size: 16
+  return_sequences: True
+  dt: 0.33
+  activation: "linear"
+
+encoder:
+  _target_: src.models.encoders.linear.Linear
+  in_size: 1
+  out_size: ${model.net.rec1_size}
+decoder:
+  _target_: src.models.decoders.linear.Linear
+  in_size: ${model.net.rec1_size}
+  out_size: 1
