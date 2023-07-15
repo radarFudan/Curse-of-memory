@@ -36,9 +36,9 @@ Let $m$ be the hidden dimension.
 
 To add
 
-|                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
+|                      Hardtanh                       |                      Tanh                       |
 | :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
-| ![Exponential decaying memory can be stably approximated](assets/perturbation_error_exp_None.png) | ![Polynomial decaying memory cannot be stably approximated](assets/perturbation_error_pol_None.png) |
+| ![Hardtanh does not enable stable approximation](assets/perturbation_error_exp_None.png) | ![Tanh does not enable stable approximation](assets/perturbation_error_pol_None.png) |
 
 </details>
 
