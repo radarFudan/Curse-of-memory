@@ -14,26 +14,38 @@
 
 ## Description
 
-In this paper, we study the curse of memory phenomenon of RNNs in sequence modelling.
+In this paper, we study RNNs' curse of memory phenomenon.
 
-It is shown that, simply adding nonlinear activation such as hardtanh and tanh does not relax the phenomenon.
+It is shown that, simply adding nonlinear activations such as hardtanh and tanh does not relax the phenomenon.
 
-Using stable parameterisation such as softplus parameterisation can relax the curse of memory and achieve stable approximation.
+Using stable parameterisation such as softplus parameterisation can relax the curse of memory and achieve stable approximation for long-memory.
 
-### Curse of memory in linear RNNs
+<details>
+<summary><b>Curse of memory in linear RNNs</b></summary>
 
 Let $m$ be the hidden dimension.
 
-| Exponential decaying memory can be stably approximated | Polynomial decaying memory cannot be stably approximated |
-|:-------------------------------------------------------:|:-------------------------------------------------------:|
+|                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
+| :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
 | ![Exponential decaying memory can be stably approximated](assets/perturbation_error_exp_None.png) | ![Polynomial decaying memory cannot be stably approximated](assets/perturbation_error_pol_None.png) |
 
+</details>
 
-### Curse of memory in nonlinear RNNs
+<details>
+<summary><b>Curse of memory in nonlinear RNNs</b></summary>
 
 To add
 
-### Proper parameterization enables stable approximation for long memory
+|                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
+| :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
+| ![Exponential decaying memory can be stably approximated](assets/perturbation_error_exp_None.png) | ![Polynomial decaying memory cannot be stably approximated](assets/perturbation_error_pol_None.png) |
+
+</details>
+
+<details>
+<summary><b>Proper parameterisation enables stable approximation for long memory</b></summary>
+
+We'll designate the parameterizations that accommodate long-term memory as stable parameterizations.
 
 | Parameterisation        | Exp    | Pol      |
 | ----------------------- | ------ | -------- |
@@ -41,10 +53,11 @@ To add
 | Vanilla RNN             | Stable | Unstable |
 | Stable Parameterisation | Stable | Stable   |
 
-
 ![Fig3_unstable](logs/LF_linear_rnn_pol_PERTURB/runs/20230715/perturbation_error.png)
 
 <!-- ![Fig3_stable](logs/LF_linear_softplusrnn_pol_PERTURB/runs/20230715/perturbation_error.png) -->
+
+</details>
 
 ## Models
 
@@ -96,11 +109,11 @@ conda activate myenv
 python src/train.py experiment=Lf/lf-rnn.yaml
 ```
 
-### Memory function evaluation
+<!-- ### Memory function evaluation
 
 ```bash
 python src/memory.py experiment=Lf/lf-rnn.yaml
-```
+``` -->
 
 ### Perturbation error evaluation
 

@@ -6,20 +6,19 @@
 # rho_name_list=("exp" "pol")
 
 # Debug, two process
-activation_list=("linear") 
-model_list=("diagonalrnn") 
+activation_list=("linear")
+model_list=("diagonalrnn")
 rho_name_list=("exp" "pol")
 
 # Debug
-# activation_list=("linear") 
-# model_list=("diagonalrnn") 
+# activation_list=("linear")
+# model_list=("diagonalrnn")
 # rho_name_list=("exp")
 
 train_and_perturb() {
     activation=$1
     model=$2
     rho_name=$3
-    rec1_sizes=$4
     experiment="LF/lf-${model}"
 
     task_name="LF_${activation}_${model}_${rho_name}"
@@ -55,7 +54,8 @@ train_and_perturb() {
         ckpt_path+=("$line")
     done < "$ckpt_path_file"
 
-    echo "ckpt_path: ${ckpt_path[@]}"
+    echo "checkpoints paths:"
+    echo "${ckpt_path[@]}"
 
     for i in "${!ckpt_path[@]}"
     do
