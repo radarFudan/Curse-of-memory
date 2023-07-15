@@ -20,11 +20,10 @@ It is shown that, simply adding nonlinear activation such as hardtanh and tanh d
 
 Using stable parameterisation such as softplus parameterisation can relax the curse of memory and achieve stable approximation.
 
-### Activation does not relax curse of memory
+### Curse of memory in linear case
 
-Graph 1(exp + hardtanh RNN)
-
-Graph 2(pol + hardtanh RNN)
+![Exponential decaying memory can be stably approximated](assets/perturbation_error_exp_None.png "Exponentially decaying memory can be stably approximated")
+![Polynomial decaying memory cannot be stably approximated](assets/perturbation_error_pol_None.png "Polynomial decaying memory cannot be stably approximated")
 
 ### Proper parameterization enables stable approximation
 
@@ -38,10 +37,9 @@ Notice that here
 
 Graph 3(pol + linear RNN)
 
-![Graph 3](logs/LF_linear_rnn_pol_PERTURB/runs/20230715/perturbation_error.pdf)
+![vanilla rnn failed to stable approximation](logs/LF_linear_rnn_pol_PERTURB/runs/20230715/perturbation_error.png)
 
-<object data="logs/LF_linear_rnn_pol_PERTURB/runs/20230715/perturbation_error.pdf" type="application/pdf" width="100%">
-</object>
+![vanilla rnn failed to](logs/LF_linear_softplusrnn_pol_PERTURB/runs/20230715/perturbation_error.png)
 
 Graph 4(pol + linear Softplus RNN)
 
