@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ./wsd/Curse-of-memory
+
 pip install -r requirements.txt
 
-bash lf_pol.sh
+bash scripts/lf_pol.sh
