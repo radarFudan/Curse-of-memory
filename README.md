@@ -24,9 +24,9 @@ Using stable parameterisation such as softplus parameterisation can relax the cu
 
 Let $m$ be the hidden dimensions.
 
-<!-- |                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
+|                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
 | :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
-| ![Exponential decaying memory can be stably approximated](https://github.com/radarFudan/Curse-of-memory/blob/main/figs/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](/figs/PerturbationErrorPol.png) | -->
+| ![Exponential decaying memory can be stably approximated](https://github.com/radarFudan/Curse-of-memory/blob/main/figs/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](/figs/PerturbationErrorPol.png) |
 
 </details>
 
