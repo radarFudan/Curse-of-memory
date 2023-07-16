@@ -22,23 +22,19 @@ Using stable parameterisation such as softplus parameterisation can relax the cu
 <details>
 <summary><b>Curse of memory in linear RNNs</b></summary>
 
-Let $m$ be the hidden dimension.
+Let $m$ be the hidden dimensions.
 
-|                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
+<!-- |                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
 | :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
-| ![Exponential decaying memory can be stably approximated](figures/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](figures/PerturbationErrorPol.png) |
-| ![Hardtanh does not enable stable approximation](figures/PerturbationErrorExp.png) | ![Tanh does not enable stable approximation](figures/PerturbationErrorPol.png) |
+| ![Exponential decaying memory can be stably approximated](figures/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](figures/PerturbationErrorPol.png) | -->
+| short-term memory | long-term memory |
+| :---------------: | :--------------: |
+| ![Exponential](figures/PerturbationErrorExp.png) | ![Polynomial](figures/PerturbationErrorPol.png) |
 
 </details>
 
 <details>
 <summary><b>Curse of memory in nonlinear RNNs</b></summary>
-
-|                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
-| :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
-| ![Exponential decaying memory can be stably approximated](figures/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](figures/PerturbationErrorPol.png) |
-| ![Hardtanh does not enable stable approximation](figures/PerturbationErrorExp.png) | ![Tanh does not enable stable approximation](figures/PerturbationErrorPol.png) |
-
 
 | Hardtanh | Tanh |
 | :---: | :---: |
