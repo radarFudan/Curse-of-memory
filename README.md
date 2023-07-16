@@ -33,7 +33,7 @@ Let $m$ be the hidden dimensions.
 <details>
 <summary><b>Curse of memory in nonlinear RNNs</b></summary>
 
-We show that the commonly used activations (hardtanh and tanh) does not directly relaxed the difficuly in the polynomial decaying memory task.
+We show that the commonly-used activations (hardtanh and tanh) do not directly relaxed the difficuly in the polynomial decaying memory task.
 
 | Hardtanh | Tanh |
 | :---: | :---: |
@@ -47,7 +47,7 @@ We show that the commonly used activations (hardtanh and tanh) does not directly
 
 We'll designate the parameterizations that accommodate long-term memory as stable parameterizations.
 
-| Parameterisation        | Exp    | Pol      |
+| Parameterisation        | Exponential decay    | Polynomial decay      |
 | ----------------------- | ------ | -------- |
 | Diagonal RNN            | Stable | Unstable |
 | Vanilla RNN             | Stable | Unstable |
