@@ -26,7 +26,7 @@ Let $m$ be the hidden dimension.
 
 |                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
 | :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
-| ![Exponential decaying memory can be stably approximated](assets/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](assets/PerturbationErrorPol.png) |
+| ![Exponential decaying memory can be stably approximated](figures/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](figures/PerturbationErrorPol.png) |
 
 </details>
 
