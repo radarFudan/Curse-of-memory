@@ -23,16 +23,20 @@ Using stable parameterisation such as softplus parameterisation can relax the cu
 <summary><b>Curse of memory in linear RNNs</b></summary>
 
 Let $m$ be the hidden dimensions.
+We manually construct datasets with different memory patterns.
+Short-memory one is exponential decay and long-memory one is polynomial decay ($\rho_t = e^{-t}$ and $\rho_t = \frac{1}{(1+t)^p}$.)
 
 |                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
 | :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
 | ![Exponential decaying memory can be stably approximated](https://github.com/radarFudan/Curse-of-memory/blob/main/figs/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](https://github.com/radarFudan/Curse-of-memory/blob/main/figs/PerturbationErrorPol.png) |
+<!-- I don't know why I have to use absolute path here.  -->
 
 </details>
 
 <details>
 <summary><b>Curse of memory in nonlinear RNNs</b></summary>
 
+Next, we still work on the polynomial decay memory.
 We show that the commonly-used activations (hardtanh and tanh) do not directly relaxed the difficuly in the polynomial decaying memory task.
 
 | Hardtanh | Tanh |
