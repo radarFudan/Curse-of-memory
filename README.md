@@ -110,12 +110,6 @@ conda activate myenv
 python src/train.py experiment=Lf/lf-rnn.yaml
 ```
 
-<!-- ### Memory function evaluation
-
-```bash
-python src/memory.py experiment=Lf/lf-rnn.yaml
-``` -->
-
 ### Perturbation error evaluation
 
 ```bash
