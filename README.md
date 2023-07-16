@@ -33,6 +33,8 @@ Let $m$ be the hidden dimensions.
 <details>
 <summary><b>Curse of memory in nonlinear RNNs</b></summary>
 
+We show that the commonly used activations (hardtanh and tanh) does not directly relaxed the difficuly in the polynomial decaying memory task.
+
 | Hardtanh | Tanh |
 | :---: | :---: |
 | ![Hardtanh does not enable stable approximation](/logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Tanh does not enable stable approximation](/logs/LF_tanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
