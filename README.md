@@ -29,7 +29,7 @@ Let $m$ be the hidden dimensions.
 | ![Exponential decaying memory can be stably approximated](figures/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](figures/PerturbationErrorPol.png) | -->
 | short-term memory | long-term memory |
 | :---------------: | :--------------: |
-| ![Exponential](figs/PerturbationErrorExp.png) | ![Polynomial](figs/PerturbationErrorPol.png) |
+| ![Exponential](/figs/PerturbationErrorExp.png) | ![Polynomial](/figs/PerturbationErrorPol.png) |
 
 </details>
 
@@ -38,7 +38,7 @@ Let $m$ be the hidden dimensions.
 
 | Hardtanh | Tanh |
 | :---: | :---: |
-| ![Hardtanh does not enable stable approximation](logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Tanh does not enable stable approximation](logs/LF_tanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
+| ![Hardtanh does not enable stable approximation](/logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Tanh does not enable stable approximation](/logs/LF_tanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
 
 
 </details>
@@ -56,7 +56,7 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 
 | Vanilla RNN | Stable Parameterisation |
 | :---: | :---: |
-| ![Vanilla RNN no stable approximation](logs/LF_linear_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Stable Parameterisation -> stable approximation](logs/LF_linear_softplusrnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
+| ![Vanilla RNN no stable approximation](/logs/LF_linear_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Stable Parameterisation -> stable approximation](/logs/LF_linear_softplusrnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
 
 
 </details>
