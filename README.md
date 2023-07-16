@@ -7,7 +7,6 @@
 <a href="https://hydra.cc/"><img alt="Config: Hydra" src="https://img.shields.io/badge/Config-Hydra-89b8cd"></a>
 <a href="https://github.com/ashleve/lightning-hydra-template"><img alt="Template" src="https://img.shields.io/badge/-Lightning--Hydra--Template-017F2F?style=flat&logo=github&labelColor=gray"></a><br>
 [![Paper](http://img.shields.io/badge/paper-arxiv.2305.19190-B31B1B.svg)](https://arxiv.org/abs/2305.19190)
-
 <!-- [![Conference](http://img.shields.io/badge/AnyConference-year-4b44ce.svg)](https://papers.nips.cc/paper/2020) -->
 
 </div>
@@ -34,11 +33,10 @@ Let $m$ be the hidden dimension.
 <details>
 <summary><b>Curse of memory in nonlinear RNNs</b></summary>
 
-To add
+| Hardtanh | Tanh |
+| :---: | :---: |
+| ![Hardtanh does not enable stable approximation](logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Tanh does not enable stable approximation](logs/LF_tanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
 
-|                      Hardtanh                       |                      Tanh                       |
-| :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
-| ![Hardtanh does not enable stable approximation](assets/perturbation_error_exp_None.png) | ![Tanh does not enable stable approximation](assets/perturbation_error_pol_None.png) |
 
 </details>
 
@@ -53,9 +51,10 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 | Vanilla RNN             | Stable | Unstable |
 | Stable Parameterisation | Stable | Stable   |
 
-![Fig3_unstable](logs/LF_linear_rnn_pol_PERTURB/runs/20230715/perturbation_error.png)
+| Vanilla RNN | Stable Parameterisation |
+| :---: | :---: |
+| ![Vanilla RNN no stable approximation](logs/LF_linear_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Stable Parameterisation -> stable approximation](logs/LF_linear_softplusrnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
 
-<!-- ![Fig3_stable](logs/LF_linear_softplusrnn_pol_PERTURB/runs/20230715/perturbation_error.png) -->
 
 </details>
 
