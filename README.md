@@ -34,6 +34,12 @@ Let $m$ be the hidden dimension.
 <details>
 <summary><b>Curse of memory in nonlinear RNNs</b></summary>
 
+|                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
+| :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
+| ![Exponential decaying memory can be stably approximated](figures/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](figures/PerturbationErrorPol.png) |
+| ![Hardtanh does not enable stable approximation](figures/PerturbationErrorExp.png) | ![Tanh does not enable stable approximation](figures/PerturbationErrorPol.png) |
+
+
 | Hardtanh | Tanh |
 | :---: | :---: |
 | ![Hardtanh does not enable stable approximation](logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Tanh does not enable stable approximation](logs/LF_tanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
