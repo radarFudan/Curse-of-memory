@@ -1,7 +1,7 @@
 #!/bin/bash
 
 activation_list=("linear" "hardtanh" "tanh") # recurrent activation
-model_list=("diagonalrnn" "rnn" "softplusrnn") # parameterization method
+model_list=("ssm")
 rho_name_list=("exp" "pol")
 
 train_and_perturb() {

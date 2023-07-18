@@ -98,7 +98,7 @@ class MLP(nn.Module):
         return x
 
 
-class SimpleSSM(nn.Module):
+class SSM(nn.Module):
     def __init__(
         self,
         rec1_size: int = 128,
@@ -180,9 +180,8 @@ if __name__ == "__main__":
     print("Stability margin", train_linear_model.stability_margin(), "expected > 0")
     print("Stability margin", test_linear_model.stability_margin())
 
-    # SimpleDiagonalRNN
-    train_model = SimpleSSM(d, training=True)
-    test_model = SimpleSSM(d, training=False)
+    train_model = SSM(d, training=True)
+    test_model = SSM(d, training=False)
 
     # Shape check
     inputs = torch.randn(1, 100, d, dtype=torch.float64)

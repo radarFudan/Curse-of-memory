@@ -1,7 +1,7 @@
 #!/bin/bash
 
 activation_list=("linear" "hardtanh" "tanh") # recurrent activation
-model_list=("ssm") # parameterization method
+model_list=("lru") # parameterization method
 rho_name_list=("exp" "pol")
 
 for activation in "${activation_list[@]}"
