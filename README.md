@@ -128,5 +128,6 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 
 1. Add state space model, S4, [LRU](https://arxiv.org/abs/2303.06349).
 2. Add other RNN variants.
-3. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. 
-
+3. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested.
+4. Docker image creation
+5. Upgrade lightning version from 2.0.5
