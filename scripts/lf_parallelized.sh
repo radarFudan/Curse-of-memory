@@ -5,11 +5,6 @@ activation_list=("linear" "hardtanh" "tanh") # recurrent activation
 model_list=("diagonalrnn" "rnn" "softplusrnn") # parameterization method
 rho_name_list=("exp" "pol")
 
-# Debug, two process
-# activation_list=("linear")
-# model_list=("diagonalrnn" "rnn" "softplusrnn")
-# rho_name_list=("exp" "pol")
-
 train_and_perturb() {
     activation=$1
     model=$2
