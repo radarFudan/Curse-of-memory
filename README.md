@@ -56,6 +56,9 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 | Diagonal RNN            | Stable | Unstable |
 | Vanilla RNN             | Stable | Unstable |
 | Stable Parameterisation | Stable | Stable   |
+| State space model       | Stable | Unstable |
+| S4                      | Stable | Stable   |
+| Linear Recurrent Unit   | Stable | Stable   |
 
 | Vanilla RNN | Stable Parameterisation |
 | :---: | :---: |
@@ -119,3 +122,11 @@ python src/train.py experiment=Lf/lf-rnn.yaml
 ```bash
 python src/perturb.py experiment=Lf/lf-rnn.yaml
 ```
+
+
+## Future plan
+
+1. Add state space model, S4, [LRU](https://arxiv.org/abs/2303.06349).
+2. Add other RNN variants.
+3. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. 
+
