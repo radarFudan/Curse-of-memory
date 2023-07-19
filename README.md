@@ -7,6 +7,7 @@
 <a href="https://hydra.cc/"><img alt="Config: Hydra" src="https://img.shields.io/badge/Config-Hydra-89b8cd"></a>
 <a href="https://github.com/ashleve/lightning-hydra-template"><img alt="Template" src="https://img.shields.io/badge/-Lightning--Hydra--Template-017F2F?style=flat&logo=github&labelColor=gray"></a><br>
 [![Paper](http://img.shields.io/badge/paper-arxiv.2305.19190-B31B1B.svg)](https://arxiv.org/abs/2305.19190)
+
 <!-- [![Conference](http://img.shields.io/badge/AnyConference-year-4b44ce.svg)](https://papers.nips.cc/paper/2020) -->
 
 </div>
@@ -26,9 +27,10 @@ Let $m$ be the hidden dimensions.
 We manually construct datasets with different memory patterns.
 Short-memory one is exponential decay and long-memory one is polynomial decay ($\rho_t = e^{-t}$ and $\rho_t = \frac{1}{(1+t)^p}$.)
 
-|                      Exponential decaying memory can be stably approximated                       |                      Polynomial decaying memory cannot be stably approximated                       |
-| :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
+|                                              Exponential decaying memory can be stably approximated                                              |                                              Polynomial decaying memory cannot be stably approximated                                              |
+| :----------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------: |
 | ![Exponential decaying memory can be stably approximated](https://github.com/radarFudan/Curse-of-memory/blob/main/figs/PerturbationErrorExp.png) | ![Polynomial decaying memory cannot be stably approximated](https://github.com/radarFudan/Curse-of-memory/blob/main/figs/PerturbationErrorPol.png) |
+
 <!-- I don't know why I have to use absolute path here.  -->
 
 </details>
@@ -39,10 +41,9 @@ Short-memory one is exponential decay and long-memory one is polynomial decay ($
 Next, we still work on the polynomial decay memory.
 We show that the commonly-used activations (hardtanh and tanh) do not directly relaxed the difficuly in the polynomial decaying memory task.
 
-| Hardtanh | Tanh |
-| :---: | :---: |
+|                                                         Hardtanh                                                         |                                                       Tanh                                                       |
+| :----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
 | ![Hardtanh does not enable stable approximation](/logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Tanh does not enable stable approximation](/logs/LF_tanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
-
 
 </details>
 
@@ -51,19 +52,18 @@ We show that the commonly-used activations (hardtanh and tanh) do not directly r
 
 We'll designate the parameterizations that accommodate long-term memory as stable parameterizations.
 
-| Parameterisation        | Exponential decay    | Polynomial decay      |
-| ----------------------- | ------ | -------- |
-| Diagonal RNN            | Stable | Unstable |
-| Vanilla RNN             | Stable | Unstable |
-| Stable Parameterisation | Stable | Stable   |
-| State space model       | Stable | Unstable |
-| S4                      | Stable | Stable   |
-| Linear Recurrent Unit   | Stable | Stable   |
+| Parameterisation        | Exponential decay | Polynomial decay |
+| ----------------------- | ----------------- | ---------------- |
+| Diagonal RNN            | Stable            | Unstable         |
+| Vanilla RNN             | Stable            | Unstable         |
+| Stable Parameterisation | Stable            | Stable           |
+| State space model       | Stable            | Unstable         |
+| S4                      | Stable            | Stable           |
+| Linear Recurrent Unit   | Stable            | Unstable         |
 
-| Vanilla RNN | Stable Parameterisation |
-| :---: | :---: |
+|                                                  Vanilla RNN                                                  |                                                      Stable Parameterisation                                                      |
+| :-----------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
 | ![Vanilla RNN no stable approximation](logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Stable Parameterisation -> stable approximation](logs/LF_hardtanh_softplusrnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
-
 
 </details>
 
@@ -122,7 +122,6 @@ python src/train.py experiment=Lf/lf-rnn.yaml
 ```bash
 python src/perturb.py experiment=Lf/lf-rnn.yaml
 ```
-
 
 ## Future plan
 
