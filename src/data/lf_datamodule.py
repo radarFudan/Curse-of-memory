@@ -121,8 +121,8 @@ class LFDataModule(LightningDataModule):
             # print("In lf_datamodule.py, outputs.shape", outputs.shape)
 
             dataset = torch.utils.data.TensorDataset(
-                torch.from_numpy(inputs).float(),
-                torch.from_numpy(outputs).float(),
+                torch.from_numpy(inputs.copy()).float(),
+                torch.from_numpy(outputs.copy()).float(),
             )
 
             self.data_train, self.data_val, self.data_test = random_split(

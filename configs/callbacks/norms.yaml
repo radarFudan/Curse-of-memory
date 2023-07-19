@@ -2,4 +2,4 @@
 # Default is L2 norm, maybe later set the parameter p as an argument.
 
 gradient_norms:
-  _target_: src.callbacks.norms
+  _target_: src.callbacks.norms.TrackNorms
