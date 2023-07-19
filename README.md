@@ -43,7 +43,7 @@ We show that the commonly-used activations (hardtanh and tanh) do not directly r
 
 |                                                         Hardtanh                                                         |                                                       Tanh                                                       |
 | :----------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
-| ![Hardtanh does not enable stable approximation](/logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Tanh does not enable stable approximation](/logs/LF_tanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
+| ![Hardtanh does not enable stable approximation](/assets/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Tanh does not enable stable approximation](/assets/LF_tanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
 
 </details>
 
@@ -63,7 +63,7 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 
 |                                                  Vanilla RNN                                                  |                                                      Stable Parameterisation                                                      |
 | :-----------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
-| ![Vanilla RNN no stable approximation](logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Stable Parameterisation -> stable approximation](logs/LF_hardtanh_softplusrnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
+| ![Vanilla RNN no stable approximation](assets/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Stable Parameterisation -> stable approximation](assets/LF_hardtanh_softplusrnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
 
 </details>
 
