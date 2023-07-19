@@ -1,0 +1,5 @@
+# https://github.com/HazyResearch/state-spaces/blob/main/src/callbacks/norms.py
+# Default is L2 norm, maybe later set the parameter p as an argument.
+
+gradient_norms:
+  _target_: src.callbacks.norms
