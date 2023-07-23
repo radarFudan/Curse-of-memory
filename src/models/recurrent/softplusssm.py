@@ -58,7 +58,38 @@ class CustomOrthogonalLayer(nn.Module):
             return F.linear(x, self.weight)
 
 
-class SoftplusRNN(nn.Module):
+class MLP(nn.Module):
+    """_summary_
+
+    Args:
+        d -> hidden_dim -> d
+    """
+
+    def __init__(self, input_dim, hidden_dim=None, activation="linear"):
+        super().__init__()
+
+        if hidden_dim is None:
+            hidden_dim = input_dim
+
+        if activation == "linear":
+            self.activation = torch.nn.Identity()
+        elif activation == "tanh":
+            self.activation = torch.tanh
+        elif activation == "hardtanh":
+            self.activation = torch.nn.functional.hardtanh
+
+        self.linear1 = nn.Linear(input_dim, hidden_dim, dtype=torch.float64)
+        self.linear2 = nn.Linear(hidden_dim, input_dim, dtype=torch.float64)
+
+    def forward(self, x):
+        x = self.linear1(x)
+        x = self.activation(x)
+        x = self.linear2(x)
+
+        return x
+
+
+class SoftplusSSM(nn.Module):
     def __init__(
         self,
         rec1_size: int = 128,
@@ -79,6 +110,9 @@ class SoftplusRNN(nn.Module):
         self.W = CustomLinearLayer(rec1_size, dtype=torch.float64, training=training)
         self.P = CustomOrthogonalLayer(rec1_size, dtype=torch.float64)
 
+        self.g = MLP(input_dim=rec1_size, activation=activation)
+        self.f = MLP(input_dim=rec1_size, activation=activation)
+
         self.rec1_size = rec1_size
         self.dt = dt
         self.return_sequences = return_sequences
@@ -86,6 +120,9 @@ class SoftplusRNN(nn.Module):
     def forward(self, x):
         batch_size, input_length, rec1_size = x.size()
         assert rec1_size == self.rec1_size
+
+        # g
+        x = self.g(x)
 
         hidden = []
         hidden.append(torch.zeros(1, 1, self.rec1_size, dtype=x.dtype, device=x.device))
@@ -100,6 +137,9 @@ class SoftplusRNN(nn.Module):
             hidden.append(h_next)
         hidden = torch.cat(hidden[1:], dim=1)
 
+        # f
+        hidden = self.f(hidden)
+
         # returned sequence or not
         if self.return_sequences:
             return hidden
@@ -110,11 +150,9 @@ class SoftplusRNN(nn.Module):
         """Return the stability margin of the model."""
         return self.W.stability_margin()
 
-    @torch.no_grad()
     def perturb_weight_initialization(self):
         """Perturb the weight initialization to make the model unstable."""
-        # self.W.perturb_weight_initialization()
-        pass
+        self.W.perturb_weight_initialization()
 
 
 if __name__ == "__main__":
@@ -133,8 +171,8 @@ if __name__ == "__main__":
     print("Stability margin", train_linear_model.stability_margin(), "expected > 0")
     print("Stability margin", test_linear_model.stability_margin())
 
-    train_model = SoftplusRNN(d, training=True)
-    test_model = SoftplusRNN(d, training=False)
+    train_model = SoftplusSSM(d, training=True)
+    test_model = SoftplusSSM(d, training=False)
 
     # Shape check
     inputs = torch.randn(1, 100, d, dtype=torch.float64)

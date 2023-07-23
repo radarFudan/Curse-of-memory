@@ -71,7 +71,7 @@ class MLP(nn.Module):
     """_summary_
 
     Args:
-        d -> hidden_dim -> hidden_dim -> d
+        d -> hidden_dim -> d
     """
 
     def __init__(self, input_dim, hidden_dim=None, activation="linear"):
@@ -139,7 +139,7 @@ class SSM(nn.Module):
         # Residual RNN
         # Expect W1 to be positive definite to ensure stability
         for i in range(input_length):
-            h_next = hidden[i] + self.dt * self.activation(
+            h_next = hidden[i] + self.dt * (
                 x[:, i : i + 1, :]
                 - self.P(self.W(self.P(hidden[i], transpose=False)), transpose=True)
             )
