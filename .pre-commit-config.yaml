@@ -8,7 +8,7 @@ repos:
       # list of supported hooks: https://pre-commit.com/hooks.html
       - id: trailing-whitespace
       - id: end-of-file-fixer
-      - id: check-docstring-first
+      # - id: check-docstring-first
       - id: check-yaml
       - id: debug-statements
       - id: detect-private-key
@@ -55,7 +55,7 @@ repos:
             "--extend-ignore",
             "E203,E402,E501,F401,F841",
             "--exclude",
-            "logs/*,data/*",
+            "logs/*,data/*,src/models/recurrent/s4.py",
           ]
 
   # python security linter

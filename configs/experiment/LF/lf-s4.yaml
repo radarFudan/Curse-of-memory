@@ -1,0 +1,24 @@
+# @package _global_
+defaults:
+  - /experiment/LF/base.yaml
+  - override /model: s4.yaml
+  - override /trainer: gpu.yaml
+
+tags: ["lf", "s4"]
+
+model:
+  optimizer:
+    lr: 0.01
+  net:
+    rec1_size: 16
+    transposed: False # x: (B H L) if transposed else (B L H)
+    return_sequences: True
+    final_act: "linear" # Otherwise will apply a glu to the final output
+  encoder:
+    _target_: src.models.encoders.linear.Linear
+    in_size: 1
+    out_size: ${model.net.rec1_size}
+  decoder:
+    _target_: src.models.decoders.linear.Linear
+    in_size: ${model.net.rec1_size}
+    out_size: 1
