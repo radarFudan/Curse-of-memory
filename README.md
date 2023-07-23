@@ -130,3 +130,36 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 3. Add convolutional networks
 4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested.
 5. Docker image creation
+
+## Refs
+
+### Curse of memory / stable approximation / memory functions
+
+```bibtex
+@misc{wang2023inverse,
+      title={Inverse Approximation Theory for Nonlinear Recurrent Neural Networks},
+      author={Shida Wang and Zhong Li and Qianxiao Li},
+      year={2023},
+      eprint={2305.19190},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
+
+### SSMs
+
+The S4 model was developed by Albert Gu, Karan Goel, and Christopher Ré.
+If you find the S4 model useful, please cite their impressive paper:
+
+```bibtex
+@misc{gu2021efficiently,
+    title={Efficiently Modeling Long Sequences with Structured State Spaces},
+    author={Gu, Albert and Goel, Karan and R{\'e}, Christopher},
+    year={2021},
+    eprint={2111.00396},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
+
+Also consider checking out their fantastic repository at [github.com/HazyResearch/state-spaces](https://github.com/HazyResearch/state-spaces).
