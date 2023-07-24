@@ -4,7 +4,7 @@
 # model_list=("softplusssm")
 # rho_name_list=("exp" "pol")
 
-activation_list=("linear" "hardtanh" "tanh") # recurrent activation
+activation_list=("linear") # recurrent activation
 model_list=("softplusssm")
 rho_name_list=("pol")
 
