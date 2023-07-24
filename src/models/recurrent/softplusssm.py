@@ -35,7 +35,7 @@ class CustomLinearLayer(nn.Module):
 
     @torch.no_grad()
     def perturb_weight_initialization(self):
-        self.weight.data = F.softplus(self.weight.data)
+        pass
 
 
 class CustomOrthogonalLayer(nn.Module):

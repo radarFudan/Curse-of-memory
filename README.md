@@ -125,11 +125,12 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 
 ## Future plan
 
-1. Add state space model, S4, [LRU](https://arxiv.org/abs/2303.06349).
-2. Add other RNN variants such as GRU, LSTM, CoRNN, LEM.
-3. Add convolutional networks
+1. Add state-space model, [S4](https://github.com/HazyResearch/state-spaces), [LRU](https://arxiv.org/abs/2303.06349).
+2. Add RNN variants such as [AntisymmetricRNN](https://github.com/KurochkinAlexey/AntisymmetricRNN), [CoRNN](https://github.com/tk-rusch/coRNN), [LEM](https://github.com/tk-rusch/LEM).
+3. Add [temporal convolutional networks](https://github.com/locuslab/TCN)
 4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested.
 5. Docker image creation
+6. There is a trade-off between approximation and stability, might need better method to achieve approximation and then maximized the stability.
 
 ## Refs
 

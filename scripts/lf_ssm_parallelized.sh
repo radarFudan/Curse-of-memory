@@ -1,8 +1,12 @@
 #!/bin/bash
 
-activation_list=("linear" "hardtanh" "tanh") # recurrent activation
+# activation_list=("linear" "hardtanh" "tanh") # recurrent activation
+# model_list=("ssm")
+# rho_name_list=("exp" "pol")
+
+activation_list=("linear") # recurrent activation
 model_list=("ssm")
-rho_name_list=("exp" "pol")
+rho_name_list=("pol")
 
 train_and_perturb() {
     activation=$1
