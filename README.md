@@ -164,3 +164,6 @@ If you find the S4 model useful, please cite their impressive paper:
 ```
 
 Also consider checking out their fantastic repository at [github.com/HazyResearch/state-spaces](https://github.com/HazyResearch/state-spaces).
+
+
+The [S5](https://github.com/lindermanlab/S5) model is implemented in jax and performance over wikitext-103 is great when combined with hyena architecture.

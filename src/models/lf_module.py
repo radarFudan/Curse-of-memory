@@ -78,7 +78,10 @@ class LFLitModule(LightningModule):
 
         # return loss or backpropagation will fail
         # minimize loss, maximize stability margin
-        loss += torch.relu(1 - self.net.stability_margin()) * 0.01
+        # loss += torch.relu(1 - self.net.stability_margin()) * 0.01
+        loss += (
+            torch.relu(1 - self.net.stability_margin()) * 0.1
+        )  # tune for LF_linear_softplusssm_pol
         return loss
 
     def on_train_epoch_end(self):
