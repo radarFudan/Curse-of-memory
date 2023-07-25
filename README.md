@@ -83,7 +83,7 @@ The discrete case can be viewed as an Euler method for the continuous dynamical 
 
 ### SSMs
 
-The state-space models we are talking about refer to the linear RNNs with layer-wise nonlinear activations. 
+The state-space models we are talking about refer to the linear RNNs with layer-wise nonlinear activations.
 
 $$y_t = f(h_t) \approx W_1 \sigma (W_2 h_t + b_2) + b_1.$$
 
@@ -138,10 +138,10 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 
 1. Add state-space model, [S4](https://github.com/HazyResearch/state-spaces), [LRU](https://arxiv.org/abs/2303.06349).
 2. Add RNN variants such as [AntisymmetricRNN](https://github.com/KurochkinAlexey/AntisymmetricRNN), [CoRNN](https://github.com/tk-rusch/coRNN), [LEM](https://github.com/tk-rusch/LEM).
-3. Add [temporal convolutional networks](https://github.com/locuslab/TCN) (TCN and Ckconv). 
-4. 4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. Need associative scan implementation for the dataset generation. 
-5. Docker image creation - delayed. 
-6. There is a trade-off between approximation and stability, might need better method to achieve approximation and then maximized the stability. 
+3. Add [temporal convolutional networks](https://github.com/locuslab/TCN) (TCN and Ckconv).
+4. 4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. Need associative scan implementation for the dataset generation.
+5. Docker image creation - delayed.
+6. There is a trade-off between approximation and stability, might need better method to achieve approximation and then maximized the stability.
 
 ## Refs
 
