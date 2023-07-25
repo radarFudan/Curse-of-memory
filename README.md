@@ -63,7 +63,7 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 
 |                                                  Vanilla RNN                                                  |                                                      Stable Parameterisation                                                      |
 | :-----------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
-| ![Vanilla RNN no stable approximation](logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Stable Parameterisation -> stable approximation](logs/LF_hardtanh_softplusrnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
+| ![Vanilla RNN no stable approximation](assets/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Stable Parameterisation -> stable approximation](assets/LF_hardtanh_softplusrnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
 
 </details>
 
@@ -135,11 +135,13 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 
 ## Future plan
 
-1. Adding state space model, S4, [LRU](https://arxiv.org/abs/2303.06349).
-2. Add other RNN variants such as GRU, LSTM, CoRNN, LEM.
-3. Add convolutional networks (TCN and Ckconv). 
-4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. Need associative scan implementation for the dataset generation. 
+
+1. Add state-space model, [S4](https://github.com/HazyResearch/state-spaces), [LRU](https://arxiv.org/abs/2303.06349).
+2. Add RNN variants such as [AntisymmetricRNN](https://github.com/KurochkinAlexey/AntisymmetricRNN), [CoRNN](https://github.com/tk-rusch/coRNN), [LEM](https://github.com/tk-rusch/LEM).
+3. Add [temporal convolutional networks](https://github.com/locuslab/TCN) (TCN and Ckconv). 
+4. 4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. Need associative scan implementation for the dataset generation. 
 5. Docker image creation - delayed. 
+6. There is a trade-off between approximation and stability, might need better method to achieve approximation and then maximized the stability. 
 
 ## Refs
 
@@ -192,3 +194,6 @@ If you find the S4 model useful, please cite their impressive paper:
 ```
 
 Also consider checking out their fantastic repository at [github.com/HazyResearch/state-spaces](https://github.com/HazyResearch/state-spaces).
+
+
+The [S5](https://github.com/lindermanlab/S5) model is implemented in jax and performance over wikitext-103 is great when combined with hyena architecture.
