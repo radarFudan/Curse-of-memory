@@ -16,7 +16,7 @@
 
 In this paper, we study RNNs' curse of memory phenomenon.
 
-It is shown that, simply adding nonlinear activations such as hardtanh and tanh does not relax the phenomenon.
+It is shown that, simply adding nonlinear activations such as hardtanh and tanh does not relax the curse.
 
 Using stable parameterisation such as softplus parameterisation can relax the curse of memory and achieve stable approximation for long-memory.
 
@@ -56,10 +56,10 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 | ----------------------- | ----------------- | ---------------- |
 | Diagonal RNN            | Stable            | Unstable         |
 | Vanilla RNN             | Stable            | Unstable         |
-| Stable Parameterisation | Stable            | Stable           |
 | State space model       | Stable            | Unstable         |
-| S4                      | Stable            | Stable           |
 | Linear Recurrent Unit   | Stable            | Unstable         |
+| Stable Parameterisation | Stable            | Stable           |
+| S4                      | Stable            | Stable           |
 
 |                                                  Vanilla RNN                                                  |                                                      Stable Parameterisation                                                      |
 | :-----------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
@@ -69,13 +69,23 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 
 ## Models
 
+### RNNs
+
 Discrete case:
-$$h_{k+1} = h_k + \Delta t\sigma(Wh_k+Ux_k)$$
+$$h_{k+1} = h_k + \Delta t\sigma(Wh_k+Ux_k).$$
 
 Continuous case:
-$$\frac{dh_{t}}{dt} = \sigma(Wh_k+Ux_k)$$
+$$\frac{dh_{t}}{dt} = \sigma(Wh_k+Ux_k).$$
+
+$$y_t = c^\top h_t$$
 
 The discrete case can be viewed as an Euler method for the continuous dynamical system.
+
+### SSMs
+
+The state-space models we are talking about refer to the linear RNNs with layer-wise nonlinear activations. 
+
+$$y_t = f(h_t) \approx W_1 \sigma (W_2 h_t + b_2) + b_1.$$
 
 ## Installation
 
@@ -125,11 +135,11 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 
 ## Future plan
 
-1. Add state space model, S4, [LRU](https://arxiv.org/abs/2303.06349).
+1. Adding state space model, S4, [LRU](https://arxiv.org/abs/2303.06349).
 2. Add other RNN variants such as GRU, LSTM, CoRNN, LEM.
-3. Add convolutional networks
-4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested.
-5. Docker image creation
+3. Add convolutional networks (TCN and Ckconv). 
+4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. Need associative scan implementation for the dataset generation. 
+5. Docker image creation - delayed. 
 
 ## Refs
 
@@ -146,7 +156,26 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 }
 ```
 
-### SSMs
+### Survey on sequence modelling from approximation theory
+
+```bibtex
+@Article{JML-2-1,
+    author = {Jiang , Haotian Li , Qianxiao Li , Zhong and Wang , Shida},
+    title = {A Brief Survey on the Approximation Theory for Sequence Modelling},
+    journal = {Journal of Machine Learning},
+    year = {2023},
+    volume = {2},
+    number = {1},
+    pages = {1--30},
+    abstract = {We survey current developments in the approximation theory of sequence modelling in machine learning. Particular emphasis is placed on classifying existing results for various model architectures through the lens of classical approximation paradigms, and the insights one can gain from these results. We also outline some future research directions towards building a theory of sequence modelling.
+    },
+    issn = {2790-2048},
+    doi = {https://doi.org/10.4208/jml.221221},
+    url = {http://global-sci.org/intro/article_detail/jml/21511.html}
+}
+```
+
+### State-space models
 
 The S4 model was developed by Albert Gu, Karan Goel, and Christopher Ré.
 If you find the S4 model useful, please cite their impressive paper:
