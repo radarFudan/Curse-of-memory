@@ -1982,7 +1982,7 @@ class S4Block(nn.Module):
     - gate: Add multiplicative gating (e.g. used in GSS), which is essentially a multiplicative instead of additive residual branch.
     - gate_act: Activation function to apply on the gate residual branch.
     - mult_act: Activation function to apply after gate multiplication (e.g. GELU in GSS).
-    - final_act: Activation function to apply after final linear layer. 'id' for no activation, None for no linear layer at all.
+    - activation: Activation function to apply after final linear layer. 'id' for no activation, None for no linear layer at all.
 
     - initializer: Initializer on final linear layer.
     - weight_norm: Weight normalization on final linear layer.
@@ -2001,7 +2001,7 @@ class S4Block(nn.Module):
         gate=None,
         gate_act=None,
         mult_act=None,
-        final_act="glu",
+        activation="glu",
         postact=None,
         initializer=None,
         weight_norm=False,
@@ -2067,19 +2067,19 @@ class S4Block(nn.Module):
 
         # position-wise output transform to mix features
         if postact is not None:
-            assert final_act is None
+            assert activation is None
             log.warning(
-                "Warning: 'postact' option changed to 'final_act' and will be removed in a future version."
+                "Warning: 'postact' option changed to 'activation' and will be removed in a future version."
             )
-            final_act, postact = postact, final_act
-        if final_act is None:
+            activation, postact = postact, activation
+        if activation is None:
             self.output_linear = nn.Identity()
         else:
             self.output_linear = LinearActivation(
                 self.rec1_size * gate if gate is not None else self.layer.d_output,
                 self.rec1_size,
                 transposed=False,
-                activation=final_act,
+                activation=activation,
                 activate=True,
             )
 

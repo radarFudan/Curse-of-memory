@@ -18,7 +18,7 @@ train_and_perturb() {
     ckpt_path_file="${log_dir_path}/ckpt_path.txt"
     trained=False
 
-    gpu_index=$(((PARALLEL_SEQ-1+2)%4))  # Cycle through GPU indices 0,1,2,3
+    gpu_index=$(((PARALLEL_SEQ-1)%4))  # Cycle through GPU indices 0,1,2,3
     export CUDA_VISIBLE_DEVICES=$gpu_index  # Set CUDA_VISIBLE_DEVICES for this job
 
     if [ "$trained" = False ]

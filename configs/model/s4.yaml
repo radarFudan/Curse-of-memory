@@ -22,7 +22,7 @@ net:
   rec1_size: 1
   transposed: False # x: (B H L) if transposed else (B L H)
   return_sequences: True
-  final_act: "linear" # Otherwise will apply a glu to the final output
+  activation: "linear" # Otherwise will apply a glu to the final output
   deterministic: True
 
 encoder:
