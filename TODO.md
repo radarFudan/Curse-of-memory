@@ -1,4 +1,3 @@
-0. Debug for the commit error
 1. tanh softplusrnn pol, requires more repeat on perturbation evaluation.
 2. The group of rnn is not very clear in terms of qualitative behavior.
     (linear / hardtanh / tanh) * rnn * pol, hardtanh rnn pol needs more repeat on perturbation evaluation
