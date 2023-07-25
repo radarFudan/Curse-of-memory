@@ -3,7 +3,8 @@
     (linear / hardtanh / tanh) * rnn * pol, hardtanh rnn pol needs more repeat on perturbation evaluation
 3. tanh diagonalrnn pol, can be associated with some dot marks, clear appearance of curse of memory
 4. linear softplusrnn pol, is not clear curse of memory 
-5. 
+5. s4 seems to output negative stability margin, what's wrong? 
+6. 
 
 
 
