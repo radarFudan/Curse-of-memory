@@ -13,7 +13,7 @@ model:
     rec1_size: 16
     transposed: False # x: (B H L) if transposed else (B L H)
     return_sequences: True
-    final_act: "linear" # Otherwise will apply a glu to the final output
+    activation: "linear" # Otherwise will apply a glu to the final output
   encoder:
     _target_: src.models.encoders.linear.Linear
     in_size: 1
