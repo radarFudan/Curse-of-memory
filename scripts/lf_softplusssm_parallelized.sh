@@ -20,13 +20,17 @@ train_and_perturb() {
     rec1_size_list=("8" "16" "32" "64")
     metric_value=("100")
     ckpt_path_file="${log_dir_path}/ckpt_path.txt"
-    trained=False
+    trained=True
 
     gpu_index=$(((PARALLEL_SEQ-1)%4))  # Cycle through GPU indices 0,1,2,3
     export CUDA_VISIBLE_DEVICES=$gpu_index  # Set CUDA_VISIBLE_DEVICES for this job
 
     if [ "$trained" = False ]
     then
+        echo "clean up ckpt_path_file and metric_value"
+        echo -n > "$ckpt_path_file"
+        echo -n > "${log_dir_path}/metric_value.txt"
+
         for i in "${!rec1_size_list[@]}"
         do
             python src/train.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}" callbacks.early_stopping.stopping_threshold="${metric_value[-1]}" logger=many_loggers
