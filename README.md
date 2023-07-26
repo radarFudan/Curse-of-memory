@@ -63,7 +63,7 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 
 |                                                  Vanilla RNN                                                  |                                                      Stable Parameterisation                                                      |
 | :-----------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
-| ![Vanilla RNN no stable approximation](assets/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Stable Parameterisation -> stable approximation](assets/LF_hardtanh_softplusrnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
+| ![Vanilla RNN no stable approximation](/logs/LF_hardtanh_rnn_pol_PERTURB/runs/20230716/perturbation_error.png) | ![Stable Parameterisation -> stable approximation](/logs/LF_hardtanh_softplusrnn_pol_PERTURB/runs/20230716/perturbation_error.png) |
 
 </details>
 
