@@ -31,6 +31,7 @@ callbacks:
 
 logger:
   wandb:
+    name: ${task_name}
     tags: ${tags}
     group: "lf"
   aim:
