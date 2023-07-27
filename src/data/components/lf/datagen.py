@@ -45,6 +45,8 @@ def LF_generate(
             output_reshaped = np.asarray(outputs).transpose(1, 0, 2)
 
             if os.path.isfile(input_file_path) and os.path.isfile(output_file_path): # Double check just for multiple process case
+                pass
+            else:
                 np.save(input_file_path, inputs)
                 np.save(output_file_path, output_reshaped)
 
