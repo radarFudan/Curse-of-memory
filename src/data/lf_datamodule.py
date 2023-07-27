@@ -93,16 +93,16 @@ class LFDataModule(LightningDataModule):
         # LF(self.hparams.data_dir, train=True, download=True)
         # LF(self.hparams.data_dir, train=False, download=True)
 
-        # LF_generate(
-        #     self.hparams.data_dir,
-        #     self.train_size + self.val_size + self.test_size,
-        #     self.seq_length,
-        #     self.input_dim,
-        #     self.dt,
-        #     self.rhos[self.rho_name],
-        #     self.rho_name,
-        # )
-        pass
+        LF_generate(
+            self.hparams.data_dir,
+            self.train_size + self.val_size + self.test_size,
+            self.seq_length,
+            self.input_dim,
+            self.dt,
+            self.rhos[self.rho_name],
+            self.rho_name,
+        )
+        # pass
 
     def setup(self, stage: Optional[str] = None):
         """Load data. Set variables: `self.data_train`, `self.data_val`, `self.data_test`.

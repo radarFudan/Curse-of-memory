@@ -25,10 +25,8 @@ def LF_generate(
         output_file_path = data_dir + f"lf_{rho_name}_outputs.npy"
 
         # Skip generation if files exist
-        if os.path.isfile(input_file_path) and os.path.isfile(output_file_path) and False:
+        if os.path.isfile(input_file_path) and os.path.isfile(output_file_path):
             print("Files for lf already exist, skipping generation.")
-            inputs = np.load(input_file_path)
-            outputs = np.load(output_file_path)
         else:
             inputs = dt * np.random.normal(size=(size, seq_length, input_dim))
 
@@ -46,16 +44,17 @@ def LF_generate(
             # outputs is of shape (seq_length, size, output_dim), need transpose
             output_reshaped = np.asarray(outputs).transpose(1, 0, 2)
 
-            np.save(data_dir + f"lf_{rho_name}_inputs.npy", inputs)
-            np.save(data_dir + f"lf_{rho_name}_outputs.npy", output_reshaped)
+            if os.path.isfile(input_file_path) and os.path.isfile(output_file_path): # Double check just for multiple process case
+                np.save(input_file_path, inputs)
+                np.save(output_file_path, output_reshaped)
 
-        # Normalize
-        # inputs /= np.max(np.abs(inputs))
-        # outputs /= np.max(np.abs(outputs))
+            # Normalize, which will break the memory form we have 
+            # inputs /= np.max(np.abs(inputs))
+            # outputs /= np.max(np.abs(outputs))
 
-        # print("LF_generate done")
-        # print("In lf datagen, input shape", inputs.shape)
-        # print("In lf datagen, output shape", output_reshaped.shape)
+            print("LF_generate done")
+            print("In lf datagen, input shape", inputs.shape)
+            print("In lf datagen, output shape", output_reshaped.shape)
 
     if evaluate_inputs is not None:
         # assert evaluate_inputs.shape[1] == seq_length  # Sequence length not necessarily the same
