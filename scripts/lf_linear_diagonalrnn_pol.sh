@@ -19,7 +19,7 @@ do
             ckpt_path_file="${log_dir_path}/ckpt_path.txt"
             trained=False
 
-            gpu_index="0"
+            gpu_index="3"
 
             if [ "$trained" = False ]
             then

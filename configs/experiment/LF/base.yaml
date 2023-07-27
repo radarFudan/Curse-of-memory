@@ -31,7 +31,7 @@ callbacks:
 
 logger:
   wandb:
-    name: ${task_name}
+    name: "${task_name}-D${model.net.rec1_size}"
     tags: ${tags}
     group: "lf"
   aim:
