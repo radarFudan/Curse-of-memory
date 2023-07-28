@@ -142,6 +142,9 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 4. 4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. Need associative scan implementation for the dataset generation.
 5. Docker image creation - delayed.
 6. There is a trade-off between approximation and stability, might need better method to achieve approximation and then maximized the stability.
+7. Produce a small memory which provides the function:
+    Given model which inputs B * T * D and outputs B * T * D, evaluate the memory function of this model.
+
 
 ## Refs
 
