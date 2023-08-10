@@ -1,0 +1,27 @@
+# @package _global_
+defaults:
+  - /experiment/LF/base.yaml
+  - override /model: lie.yaml
+  - override /trainer: gpu.yaml
+
+tags: ["lf", "lie"]
+
+model:
+  optimizer:
+    lr: 1
+  net:
+    rec1_size: 16
+    return_sequences: True
+    activation: "relu"
+  encoder:
+    _target_: src.models.encoders.linear.Linear
+    in_size: 1
+    out_size: ${model.net.rec1_size}
+  decoder:
+    _target_: src.models.decoders.linear.Linear
+    in_size: ${model.net.rec1_size}
+    out_size: 1
+
+data:
+  batch_size: 128
+  train_val_test_split: [128, 128, 128]

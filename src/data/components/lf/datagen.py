@@ -25,7 +25,7 @@ def LF_generate(
         output_file_path = data_dir + f"lf_{rho_name}_outputs.npy"
 
         # Skip generation if files exist
-        if os.path.isfile(input_file_path) and os.path.isfile(output_file_path):
+        if os.path.isfile(input_file_path) and os.path.isfile(output_file_path) and False:
             print("Files for lf already exist, skipping generation.")
         else:
             inputs = dt * np.random.normal(size=(size, seq_length, input_dim))
@@ -44,13 +44,15 @@ def LF_generate(
             # outputs is of shape (seq_length, size, output_dim), need transpose
             output_reshaped = np.asarray(outputs).transpose(1, 0, 2)
 
-            if os.path.isfile(input_file_path) and os.path.isfile(output_file_path): # Double check just for multiple process case
+            if os.path.isfile(input_file_path) and os.path.isfile(
+                output_file_path
+            ):  # Double check just for multiple process case
                 pass
             else:
                 np.save(input_file_path, inputs)
                 np.save(output_file_path, output_reshaped)
 
-            # Normalize, which will break the memory form we have 
+            # Normalize, which will break the memory form we have
             # inputs /= np.max(np.abs(inputs))
             # outputs /= np.max(np.abs(outputs))
 

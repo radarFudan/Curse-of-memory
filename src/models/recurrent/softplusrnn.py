@@ -75,6 +75,10 @@ class SoftplusRNN(nn.Module):
             self.activation = torch.tanh
         elif activation == "hardtanh":
             self.activation = torch.nn.functional.hardtanh
+        elif activation == "relu":
+            self.activation = torch.relu
+        elif activation == "sigmoid":
+            self.activation = torch.sigmoid
 
         self.W = CustomLinearLayer(rec1_size, dtype=torch.float64, training=training)
         self.P = CustomOrthogonalLayer(rec1_size, dtype=torch.float64)
