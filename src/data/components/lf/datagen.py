@@ -64,11 +64,10 @@ def LF_generate(
             #     for s in range(t + 1):
             #         output += inputs[:, t - s, :] * (rho(s * dt))
             #     outputs.append(output)
-
-            outputs = fft_convolve(inputs, rho, dt) # From O(n^2) to O(n logn)
-
             # outputs is of shape (seq_length, size, output_dim), need transpose
-            output_reshaped = np.asarray(outputs).transpose(1, 0, 2)
+            # output_reshaped = np.asarray(outputs).transpose(1, 0, 2)
+
+            output_reshaped = fft_convolve(inputs, rho, dt) # From O(n^2) to O(n logn)
 
             np.save(data_dir + f"lf_{rho_name}_inputs.npy", inputs)
             np.save(data_dir + f"lf_{rho_name}_outputs.npy", output_reshaped)
