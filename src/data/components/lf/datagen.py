@@ -3,6 +3,28 @@ import os
 import numpy as np
 import scipy
 
+def fft_convolve(inputs, rho, dt):
+    seq_length, input_dim = inputs.shape[1], inputs.shape[2]
+    # Create the rho values for the entire sequence length
+    rho_vals = np.array([rho(t * dt) for t in range(seq_length)])
+    
+    # Pad the sequences to avoid circular convolution
+    padded_rho = np.concatenate((rho_vals, np.zeros_like(rho_vals)))
+    padded_inputs = np.concatenate((inputs, np.zeros((inputs.shape[0], seq_length, input_dim))), axis=1)
+
+    # FFT
+    rho_fft = np.fft.fft(padded_rho)
+    inputs_fft = np.fft.fft(padded_inputs, axis=1)
+    
+    # Element-wise multiplication in frequency domain
+    result_fft = inputs_fft * rho_fft[np.newaxis, :, np.newaxis]
+    
+    # Inverse FFT
+    conv_result = np.fft.ifft(result_fft, axis=1)
+    
+    # Return the result up to seq_length
+    return np.real(conv_result[:, :seq_length, :])
+
 
 def LF_generate(
     data_dir,
@@ -36,15 +58,16 @@ def LF_generate(
             if Gaussian_input:
                 inputs = np.cumsum(inputs, axis=1)
 
-            outputs = []
-            for t in range(seq_length):
-                output = 0
-                for s in range(t + 1):
-                    output += inputs[:, t - s, :] * (rho(s * dt))
-                outputs.append(output)
-
+            # outputs = []
+            # for t in range(seq_length):
+            #     output = 0
+            #     for s in range(t + 1):
+            #         output += inputs[:, t - s, :] * (rho(s * dt))
+            #     outputs.append(output)
             # outputs is of shape (seq_length, size, output_dim), need transpose
-            output_reshaped = np.asarray(outputs).transpose(1, 0, 2)
+            # output_reshaped = np.asarray(outputs).transpose(1, 0, 2)
+
+            output_reshaped = fft_convolve(inputs, rho, dt) # From O(n^2) to O(n logn)
 
             np.save(data_dir + f"lf_{rho_name}_inputs.npy", inputs)
             np.save(data_dir + f"lf_{rho_name}_outputs.npy", output_reshaped)
