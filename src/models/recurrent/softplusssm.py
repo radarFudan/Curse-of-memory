@@ -2,6 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+from src.models.recurrent.activation import activation_name_to_function
+
 
 class CustomLinearLayer(nn.Module):
     def __init__(
@@ -71,12 +73,10 @@ class MLP(nn.Module):
         if hidden_dim is None:
             hidden_dim = input_dim
 
-        if activation == "linear":
-            self.activation = torch.nn.Identity()
-        elif activation == "tanh":
-            self.activation = torch.tanh
-        elif activation == "hardtanh":
-            self.activation = torch.nn.functional.hardtanh
+        # Kept for standalone purpose
+        # if activation == "linear":
+        #     self.activation = torch.nn.Identity()
+        self.activation = activation_name_to_function(activation)
 
         self.linear1 = nn.Linear(input_dim, hidden_dim, dtype=torch.float64)
         self.linear2 = nn.Linear(hidden_dim, input_dim, dtype=torch.float64)

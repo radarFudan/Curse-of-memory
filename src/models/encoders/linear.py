@@ -3,6 +3,8 @@ import torch
 import torch.nn.utils.parametrize as P
 from torch import nn
 
+from src.models.recurrent.activation import activation_name_to_function
+
 
 class Linear(nn.Module):
     def __init__(
@@ -18,14 +20,10 @@ class Linear(nn.Module):
         self.in_size = in_size
         self.out_size = out_size
 
-        if activation == "linear":
-            self.activation = torch.nn.Identity()
-        elif activation == "tanh":
-            self.activation = torch.tanh
-        elif activation == "hardtanh":
-            self.activation = torch.nn.functional.hardtanh
-        elif activation == "softmax":
-            self.activation = torch.nn.Softmax(dim=-1)
+        # Kept for standalone purpose
+        # if activation == "linear":
+        #     self.activation = torch.nn.Identity()
+        self.activation = activation_name_to_function(activation)
 
     def forward(self, x):
         # print("in linear encoder", x.shape)

@@ -2,6 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+from src.models.recurrent.activation import activation_name_to_function
+
 
 class CustomLinearLayer(nn.Module):
     def __init__(
@@ -69,16 +71,10 @@ class SoftplusRNN(nn.Module):
     ):
         super().__init__()
 
-        if activation == "linear":
-            self.activation = torch.nn.Identity()
-        elif activation == "tanh":
-            self.activation = torch.tanh
-        elif activation == "hardtanh":
-            self.activation = torch.nn.functional.hardtanh
-        elif activation == "relu":
-            self.activation = torch.relu
-        elif activation == "sigmoid":
-            self.activation = torch.sigmoid
+        # Kept for standalone purpose
+        # if activation == "linear":
+        #     self.activation = torch.nn.Identity()
+        self.activation = activation_name_to_function(activation)
 
         self.W = CustomLinearLayer(rec1_size, dtype=torch.float64, training=training)
         self.P = CustomOrthogonalLayer(rec1_size, dtype=torch.float64)
