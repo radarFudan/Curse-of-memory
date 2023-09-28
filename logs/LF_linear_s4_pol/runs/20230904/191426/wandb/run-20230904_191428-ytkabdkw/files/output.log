@@ -1,0 +1,106 @@
+[[36m2023-09-04 19:14:33,289[39m][[34m__main__[39m][[32mINFO[39m] - Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[[36m2023-09-04 19:14:33,362[39m][[34mpytorch_lightning.utilities.rank_zero[39m][[32mINFO[39m] - Trainer already configured with model summary callbacks: [<class 'lightning.pytorch.callbacks.rich_model_summary.RichModelSummary'>]. Skipping setting a default `ModelSummary` callback.
+[[36m2023-09-04 19:14:33,375[39m][[34mpytorch_lightning.utilities.rank_zero[39m][[32mINFO[39m] - GPU available: True (cuda), used: True
+[[36m2023-09-04 19:14:33,376[39m][[34mpytorch_lightning.utilities.rank_zero[39m][[32mINFO[39m] - TPU available: False, using: 0 TPU cores
+[[36m2023-09-04 19:14:33,376[39m][[34mpytorch_lightning.utilities.rank_zero[39m][[32mINFO[39m] - IPU available: False, using: 0 IPUs
+[[36m2023-09-04 19:14:33,376[39m][[34mpytorch_lightning.utilities.rank_zero[39m][[32mINFO[39m] - HPU available: False, using: 0 HPUs
+[[36m2023-09-04 19:14:33,376[39m][[34m__main__[39m][[32mINFO[39m] - Logging hyperparameters!
+Running validation before training
+LF_generate done
+In lf datagen, input shape (153600, 100, 1)
+In lf datagen, output shape (153600, 100, 1)
+In lf_datamodule.py, self.rho_name pol
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+/home/shida/anaconda3/envs/lh/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:430: PossibleUserWarning: The dataloader, val_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 32 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+[[36m2023-09-04 19:14:40,234[39m][[34msrc.models.recurrent.s4[39m][[32mINFO[39m] - S4: Initializing kernel to length 100
+[37mValidation[39m [35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[90m╺━━━━━━━[39m [37m20/25[39m [37m0:00:03 • 0:00:01[39m [37m55.66it/s
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m      Validate metric      [22m┃[1m       DataLoader 0        [22m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│[36m         val/loss          [39m│[35m    14.064411163330078     [39m│
+└───────────────────────────┴───────────────────────────┘
+[37mValidation[39m [35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[39m [37m25/25[39m [37m0:00:03 • 0:00:00[39m [37m57.82it/s
+[?25h[[36m2023-09-04 19:14:41,227[39m][[34m__main__[39m][[32mINFO[39m] - Starting training!
+LF_generate done
+In lf datagen, input shape (153600, 100, 1)
+In lf datagen, output shape (153600, 100, 1)
+┏━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃[1m    [22m┃[1m Name                  [22m┃[1m Type          [22m┃[1m Params [22m┃
+┡━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ 0  │ net                   │ S4Block       │  4.4 K │
+│ 1  │ net.layer             │ FFTConv       │  4.1 K │
+│ 2  │ net.layer.activation  │ GELU          │      0 │
+│ 3  │ net.layer.kernel      │ SSMKernelDPLR │  4.1 K │
+│ 4  │ net.layer.drop        │ Identity      │      0 │
+│ 5  │ net.layer.drop_kernel │ Identity      │      0 │
+│ 6  │ net.mult_activation   │ Identity      │      0 │
+│ 7  │ net.drop              │ Identity      │      0 │
+│ 8  │ net.output_linear     │ Sequential    │    272 │
+│ 9  │ net.output_linear.0   │ Linear        │    272 │
+│ 10 │ net.output_linear.1   │ Identity      │      0 │
+│ 11 │ encoder               │ Linear        │     32 │
+│ 12 │ encoder.U             │ Linear        │     32 │
+│ 13 │ encoder.activation    │ Identity      │      0 │
+│ 14 │ decoder               │ Linear        │     17 │
+│ 15 │ decoder.U             │ Linear        │     17 │
+│ 16 │ decoder.activation    │ Identity      │      0 │
+│ 17 │ train_loss            │ MeanMetric    │      0 │
+│ 18 │ val_loss              │ MeanMetric    │      0 │
+│ 19 │ test_loss             │ MeanMetric    │      0 │
+└────┴───────────────────────┴───────────────┴────────┘
+[1mTrainable params[22m: 4.4 K
+[1mNon-trainable params[22m: 0
+[1mTotal params[22m: 4.4 K
+[1mTotal estimated model params size (MB)[22m: 0
+/home/shida/anaconda3/envs/lh/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:430: PossibleUserWarning:
+The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers`
+argument` (try 32 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+
+
+
+[37mEpoch 0/999[39m [35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[39m [37m250/250[39m [37m0:00:08 • 0:00:00[39m [37m30.20it/s[39m [37mv_num: bdkw train/loss: 0.329 
+[37mValidation[39m  [35m━━━━━━━━━━━━━━━━━━━━━━━━[90m╺━━━━━━━━━━━━━━━[39m [37m15/25  [39m [37m0:00:00 • 0:00:01[39m [37m51.55it/s
+
+
+
+
+Epoch 1/999 [35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[39m [37m250/250[39m [37m0:00:08 • 0:00:00[39m [37m28.16it/s[39m [37mv_num: bdkw train/loss: 0.218 val/loss: 0.448 
+[37mValidation[39m  [35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[90m╺━[39m [37m24/25  [39m [37m0:00:00 • 0:00:01[39m [37m49.32it/s
+
+
+
+
+Epoch 2/999 [35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸[90m━━━[39m [37m230/250[39m [37m0:00:08 • 0:00:01[39m [37m28.24it/s[39m [37mv_num: bdkw train/loss: 0.068 val/loss: 0.232 
+Epoch 2/999 [35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[39m [37m250/250[39m [37m0:00:08 • 0:00:00[39m [37m28.33it/s[39m [37mv_num: bdkw train/loss: 0.034 val/loss: 0.033 
+[?25h[[36m2023-09-04 19:15:11,056[39m][[34m__main__[39m][[32mINFO[39m] - Starting testing!
+LF_generate done
+In lf datagen, input shape (153600, 100, 1)
+In lf datagen, output shape (153600, 100, 1)
+[[36m2023-09-04 19:15:13,005[39m][[34mpytorch_lightning.utilities.rank_zero[39m][[32mINFO[39m] - Restoring states from the checkpoint path at /home/shida/Figure_1/logs/LF_linear_s4_pol/runs/20230904/191426/checkpoints/epoch_002.ckpt
+[[36m2023-09-04 19:15:13,112[39m][[34mpytorch_lightning.utilities.rank_zero[39m][[32mINFO[39m] - Loaded model weights from the checkpoint at /home/shida/Figure_1/logs/LF_linear_s4_pol/runs/20230904/191426/checkpoints/epoch_002.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m      Validate metric      [22m┃[1m       DataLoader 0        [22m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│[36m         val/loss          [39m│[35m    0.03276938945055008    [39m│
+└───────────────────────────┴───────────────────────────┘
+[37mValidation[39m [35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[39m [37m25/25[39m [37m0:00:00 • 0:00:00[39m [37m53.21it/s
+[?25h
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+/home/shida/anaconda3/envs/lh/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:430: PossibleUserWarning: The dataloader, test_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 32 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+[?25hLF_generate done
+In lf datagen, input shape (153600, 100, 1)
+In lf datagen, output shape (153600, 100, 1)
+[[36m2023-09-04 19:15:15,371[39m][[34mpytorch_lightning.utilities.rank_zero[39m][[32mINFO[39m] - Restoring states from the checkpoint path at /home/shida/Figure_1/logs/LF_linear_s4_pol/runs/20230904/191426/checkpoints/epoch_002.ckpt
+[[36m2023-09-04 19:15:15,474[39m][[34mpytorch_lightning.utilities.rank_zero[39m][[32mINFO[39m] - Loaded model weights from the checkpoint at /home/shida/Figure_1/logs/LF_linear_s4_pol/runs/20230904/191426/checkpoints/epoch_002.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m        Test metric        [22m┃[1m       DataLoader 0        [22m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│[36m         test/loss         [39m│[35m    0.03229744732379913    [39m│
+└───────────────────────────┴───────────────────────────┘
+[37mTesting[39m [35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[39m [37m25/25[39m [37m0:00:00 • 0:00:00[39m [37m52.28it/s
+[?25h[[36m2023-09-04 19:15:16,212[39m][[34m__main__[39m][[32mINFO[39m] - Best ckpt path: /home/shida/Figure_1/logs/LF_linear_s4_pol/runs/20230904/191426/checkpoints/epoch_002.ckpt
+[[36m2023-09-04 19:15:16,214[39m][[34msrc.utils.utils[39m][[32mINFO[39m] - Output dir: /home/shida/Figure_1/logs/LF_linear_s4_pol/runs/20230904/191426
+[[36m2023-09-04 19:15:16,214[39m][[34msrc.utils.utils[39m][[32mINFO[39m] - Closing wandb!

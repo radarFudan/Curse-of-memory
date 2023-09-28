@@ -211,6 +211,8 @@ def Activation(activation=None, dim=-1):
         return nn.Identity()
     elif activation == "tanh":
         return nn.Tanh()
+    elif activation == "hardtanh":
+        return nn.Hardtanh()
     elif activation == "relu":
         return nn.ReLU()
     elif activation == "gelu":

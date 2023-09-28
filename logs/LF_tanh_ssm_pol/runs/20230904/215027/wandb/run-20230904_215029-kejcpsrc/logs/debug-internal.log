@@ -1,0 +1,617 @@
+2023-09-04 21:50:29,163 INFO    StreamThr :1463011 [internal.py:wandb_internal():86] W&B internal server running at pid: 1463011, started at: 2023-09-04 21:50:29.162239
+2023-09-04 21:50:29,165 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status
+2023-09-04 21:50:29,167 INFO    WriterThread:1463011 [datastore.py:open_for_write():85] open: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/run-kejcpsrc.wandb
+2023-09-04 21:50:29,169 DEBUG   SenderThread:1463011 [sender.py:send():379] send: header
+2023-09-04 21:50:29,179 DEBUG   SenderThread:1463011 [sender.py:send():379] send: run
+2023-09-04 21:50:29,182 INFO    SenderThread:1463011 [sender.py:_maybe_setup_resume():758] checking resume status for None/Curse-of-memory/kejcpsrc
+2023-09-04 21:50:30,025 INFO    SenderThread:1463011 [dir_watcher.py:__init__():211] watching files in: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files
+2023-09-04 21:50:30,026 INFO    SenderThread:1463011 [sender.py:_start_run_threads():1121] run started: kejcpsrc with start time 1693835429.16219
+2023-09-04 21:50:30,026 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:50:30,026 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:50:30,033 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: check_version
+2023-09-04 21:50:30,034 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: check_version
+2023-09-04 21:50:30,081 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: run_start
+2023-09-04 21:50:30,088 DEBUG   HandlerThread:1463011 [system_info.py:__init__():31] System info init
+2023-09-04 21:50:30,088 DEBUG   HandlerThread:1463011 [system_info.py:__init__():46] System info init done
+2023-09-04 21:50:30,088 INFO    HandlerThread:1463011 [system_monitor.py:start():181] Starting system monitor
+2023-09-04 21:50:30,089 INFO    SystemMonitor:1463011 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-09-04 21:50:30,089 INFO    HandlerThread:1463011 [system_monitor.py:probe():201] Collecting system info
+2023-09-04 21:50:30,090 INFO    SystemMonitor:1463011 [interfaces.py:start():190] Started cpu monitoring
+2023-09-04 21:50:30,091 INFO    SystemMonitor:1463011 [interfaces.py:start():190] Started disk monitoring
+2023-09-04 21:50:30,092 INFO    SystemMonitor:1463011 [interfaces.py:start():190] Started gpu monitoring
+2023-09-04 21:50:30,093 INFO    SystemMonitor:1463011 [interfaces.py:start():190] Started memory monitoring
+2023-09-04 21:50:30,095 INFO    SystemMonitor:1463011 [interfaces.py:start():190] Started network monitoring
+2023-09-04 21:50:30,145 DEBUG   HandlerThread:1463011 [system_info.py:probe():195] Probing system
+2023-09-04 21:50:30,154 DEBUG   HandlerThread:1463011 [system_info.py:_probe_git():180] Probing git
+2023-09-04 21:50:30,168 DEBUG   HandlerThread:1463011 [system_info.py:_probe_git():188] Probing git done
+2023-09-04 21:50:30,169 DEBUG   HandlerThread:1463011 [system_info.py:probe():240] Probing system done
+2023-09-04 21:50:30,169 DEBUG   HandlerThread:1463011 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-78-generic-x86_64-with-glibc2.31', 'python': '3.9.16', 'heartbeatAt': '2023-09-04T13:50:30.145783', 'startedAt': '2023-09-04T13:50:29.153418', 'docker': None, 'cuda': None, 'args': ('experiment=LF/lf-ssm', 'data.rho_name=pol', 'model.net.rec1_size=32', 'model.net.activation=tanh', 'task_name=LF_tanh_ssm_pol', 'callbacks.early_stopping.stopping_threshold=0.09874731302261353', 'logger=many_loggers'), 'state': 'running', 'program': '/home/shida/Figure_1/src/train.py', 'codePath': 'src/train.py', 'git': {'remote': 'https://github.com/radarFudan/Curse-of-memory.git', 'commit': 'da81b3bc431ecd55f98bad0066142a97867ae727'}, 'email': '25528016+radarFudan@users.noreply.github.com', 'root': '/home/shida/Figure_1', 'host': 'SMC', 'username': 'shida', 'executable': '/home/shida/anaconda3/envs/lh/bin/python', 'cpu_count': 16, 'cpu_count_logical': 32, 'cpu_freq': {'current': 2.3154375000000007, 'min': 800.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 2.095, 'min': 800.0, 'max': 4000.0}, {'current': 3.4, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 3.0, 'min': 800.0, 'max': 4000.0}, {'current': 3.0, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 3.693, 'min': 800.0, 'max': 4000.0}, {'current': 1.7, 'min': 800.0, 'max': 4000.0}, {'current': 1.9, 'min': 800.0, 'max': 4000.0}, {'current': 1.0, 'min': 800.0, 'max': 4000.0}, {'current': 0.909, 'min': 800.0, 'max': 4000.0}, {'current': 2.0, 'min': 800.0, 'max': 4000.0}, {'current': 4.0, 'min': 800.0, 'max': 4000.0}, {'current': 4.0, 'min': 800.0, 'max': 4000.0}, {'current': 0.9, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 4.0, 'min': 800.0, 'max': 4000.0}, {'current': 1.6, 'min': 800.0, 'max': 4000.0}, {'current': 0.9, 'min': 800.0, 'max': 4000.0}, {'current': 0.9, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 4.0, 'min': 800.0, 'max': 4000.0}, {'current': 2.7, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 3.4, 'min': 800.0, 'max': 4000.0}, {'current': 1.7, 'min': 800.0, 'max': 4000.0}], 'disk': {'total': 1758.8579597473145, 'used': 1319.9600448608398}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}], 'memory': {'total': 125.40912246704102}}
+2023-09-04 21:50:30,169 INFO    HandlerThread:1463011 [system_monitor.py:probe():211] Finished collecting system info
+2023-09-04 21:50:30,169 INFO    HandlerThread:1463011 [system_monitor.py:probe():214] Publishing system info
+2023-09-04 21:50:30,169 DEBUG   HandlerThread:1463011 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-09-04 21:50:30,169 DEBUG   HandlerThread:1463011 [system_info.py:_save_pip():67] Saving pip packages done
+2023-09-04 21:50:30,169 DEBUG   HandlerThread:1463011 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-09-04 21:50:31,031 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/requirements.txt
+2023-09-04 21:50:31,032 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:50:31,032 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/conda-environment.yaml
+2023-09-04 21:50:33,619 DEBUG   HandlerThread:1463011 [system_info.py:_save_conda():86] Saving conda packages done
+2023-09-04 21:50:33,620 DEBUG   HandlerThread:1463011 [system_info.py:_save_code():89] Saving code
+2023-09-04 21:50:33,627 DEBUG   HandlerThread:1463011 [system_info.py:_save_code():110] Saving code done
+2023-09-04 21:50:33,627 DEBUG   HandlerThread:1463011 [system_info.py:_save_patches():127] Saving git patches
+2023-09-04 21:50:33,692 DEBUG   HandlerThread:1463011 [system_info.py:_save_patches():169] Saving git patches done
+2023-09-04 21:50:33,693 INFO    HandlerThread:1463011 [system_monitor.py:probe():216] Finished publishing system info
+2023-09-04 21:50:33,698 DEBUG   SenderThread:1463011 [sender.py:send():379] send: files
+2023-09-04 21:50:33,698 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-09-04 21:50:33,699 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file code/src/train.py with policy now
+2023-09-04 21:50:33,700 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file diff.patch with policy now
+2023-09-04 21:50:33,707 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:50:33,709 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:50:34,032 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/conda-environment.yaml
+2023-09-04 21:50:34,033 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/code/src/train.py
+2023-09-04 21:50:34,033 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-metadata.json
+2023-09-04 21:50:34,034 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/diff.patch
+2023-09-04 21:50:34,034 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/code/src
+2023-09-04 21:50:34,034 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/code
+2023-09-04 21:50:34,046 DEBUG   SenderThread:1463011 [sender.py:send():379] send: telemetry
+2023-09-04 21:50:34,046 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:34,046 DEBUG   SenderThread:1463011 [sender.py:send():379] send: telemetry
+2023-09-04 21:50:34,046 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:34,046 WARNING SenderThread:1463011 [sender.py:send_metric():1326] Seen metric with glob (shouldn't happen)
+2023-09-04 21:50:34,047 DEBUG   SenderThread:1463011 [sender.py:send():379] send: config
+2023-09-04 21:50:34,555 INFO    wandb-upload_0:1463011 [upload_job.py:push():131] Uploaded file /tmp/tmpy1i8mhj_wandb/as3t89ni-wandb-metadata.json
+2023-09-04 21:50:34,577 INFO    wandb-upload_1:1463011 [upload_job.py:push():131] Uploaded file /tmp/tmpy1i8mhj_wandb/dt9zme6w-code/src/train.py
+2023-09-04 21:50:35,015 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:50:35,033 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:35,631 INFO    wandb-upload_2:1463011 [upload_job.py:push():131] Uploaded file /tmp/tmpy1i8mhj_wandb/uiznas3c-diff.patch
+2023-09-04 21:50:37,034 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:37,745 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:50:37,748 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:37,749 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:37,749 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:50:37,749 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:50:37,750 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:50:38,035 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:50:39,035 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:40,019 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:50:41,036 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:42,169 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:50:42,172 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,172 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,173 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,173 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,173 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,173 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,173 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,174 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,174 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,174 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,174 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,174 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,174 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,175 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,175 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:50:42,175 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:50:42,175 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:50:42,176 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:50:43,036 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:43,037 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:50:44,935 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:50:44,937 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:50:44,938 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:50:44,939 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:50:45,038 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:45,038 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:50:45,061 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:50:47,039 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:47,767 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:50:47,769 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:50:47,770 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:50:47,771 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:50:48,039 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:50:48,706 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:50:48,707 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:50:49,040 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:50,123 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:50:50,488 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:50:50,491 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:50:50,491 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:50:50,492 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:50:51,042 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:51,042 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:50:53,043 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:53,247 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:50:53,248 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:50:53,248 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:50:53,249 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:50:53,794 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:50:53,796 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:50:53,796 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:50:53,797 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:50:54,043 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:50:55,044 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:55,179 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:50:57,059 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:50:57,125 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:50:57,127 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:50:57,128 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:50:57,129 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:50:58,060 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:00,231 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:00,303 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:00,535 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:00,535 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:00,536 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:01,062 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/config.yaml
+2023-09-04 21:51:01,063 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:03,303 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:03,304 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:03,304 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:03,305 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:03,706 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:51:03,707 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:51:04,064 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:05,542 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:06,262 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:06,263 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:06,264 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:06,264 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:07,065 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:09,281 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:09,284 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:09,284 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:09,284 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:09,846 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:09,847 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:09,847 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:09,848 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:10,067 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:10,563 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:11,072 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:51:12,900 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:12,901 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:12,901 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:12,901 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:13,073 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:51:13,074 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:15,579 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:15,898 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:15,899 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:15,900 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:15,900 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:16,075 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:18,706 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:51:18,707 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:51:18,844 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:19,031 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:19,031 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:19,032 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:19,077 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:20,634 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:21,972 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:21,973 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:21,974 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:21,975 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:22,078 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:24,714 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:24,716 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:24,716 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:24,717 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:25,080 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:25,249 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:25,251 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:25,251 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:25,252 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:25,636 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:26,081 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:27,081 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:51:28,217 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:28,220 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:28,220 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:28,224 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:29,082 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:30,095 DEBUG   SystemMonitor:1463011 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-09-04 21:51:30,098 DEBUG   SenderThread:1463011 [sender.py:send():379] send: stats
+2023-09-04 21:51:30,659 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:31,194 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:31,195 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:31,195 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:31,196 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:32,084 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:33,707 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:51:33,708 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:51:34,093 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:34,095 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:34,095 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:34,096 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:35,086 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:35,672 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:36,923 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:36,925 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:36,925 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:36,925 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:37,087 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:39,817 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:39,819 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:39,820 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:39,822 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:40,089 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:40,366 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:40,368 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:40,368 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:40,369 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:40,695 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:41,089 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:51:41,090 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:43,091 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:51:43,454 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:43,455 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:43,455 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:43,456 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:44,091 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:45,695 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:46,195 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:46,197 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:46,198 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:46,199 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:47,092 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:48,707 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:51:48,708 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:51:48,921 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:48,986 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:48,987 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:48,987 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:49,093 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:50,743 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:51,831 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:51,833 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:51,834 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:51,836 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:52,094 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:54,625 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:54,626 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:54,627 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:54,627 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:55,096 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:55,153 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:55,155 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:55,155 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:55,156 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:55,755 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:51:56,096 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:57,097 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:51:58,038 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:51:58,040 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:51:58,041 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:51:58,041 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:51:58,098 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:51:59,098 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:52:00,101 DEBUG   SenderThread:1463011 [sender.py:send():379] send: stats
+2023-09-04 21:52:00,777 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:00,850 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:00,852 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:00,852 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:00,852 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:01,103 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:03,650 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:03,652 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:03,653 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:03,654 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:03,707 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:52:03,707 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:52:04,105 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:05,815 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:06,558 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:06,560 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:06,560 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:06,561 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:07,106 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:09,546 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:09,547 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:09,548 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:09,549 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:10,073 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:10,074 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:10,075 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:10,076 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:10,108 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:10,842 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:11,109 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:52:13,109 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:52:13,270 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:13,272 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:13,273 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:13,273 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:14,110 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:15,867 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:16,300 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:16,303 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:16,303 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:16,305 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:17,111 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:18,708 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:52:18,709 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:52:19,142 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:19,144 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:19,144 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:19,145 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:20,116 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:20,901 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:22,012 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:22,014 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:22,014 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:22,015 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:22,118 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:24,865 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:24,867 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:24,868 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:24,869 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:25,119 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:25,409 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:25,411 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:25,412 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:25,413 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:25,929 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:26,120 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:27,121 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:52:28,511 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:28,513 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:28,513 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:28,514 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:29,122 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:52:29,122 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:30,103 DEBUG   SenderThread:1463011 [sender.py:send():379] send: stats
+2023-09-04 21:52:30,978 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:31,452 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:31,453 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:31,454 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:31,455 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:32,124 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:33,710 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:52:33,711 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:52:34,717 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:34,719 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:34,720 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:34,721 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:35,126 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:36,008 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:37,721 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:37,723 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:37,724 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:37,725 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:38,127 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:40,835 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:40,835 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:40,835 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:40,837 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:41,022 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:41,129 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:41,353 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:41,354 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:41,354 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:41,355 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:42,130 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:43,130 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:52:44,357 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:44,358 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:44,358 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:44,359 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:45,131 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:52:45,131 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:46,064 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:47,231 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:47,233 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:47,234 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:47,235 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:48,133 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:48,710 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:52:48,711 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:52:49,981 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:49,983 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:49,984 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:49,984 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:50,134 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:51,079 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:52,891 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:52,893 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:52,894 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:52,897 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:53,135 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:55,790 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:55,792 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:55,793 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:55,794 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:56,082 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:52:56,137 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:56,301 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:56,303 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:56,303 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:56,304 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:52:57,138 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:52:57,138 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:52:59,139 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:52:59,311 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:52:59,314 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:52:59,314 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:52:59,315 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:53:00,106 DEBUG   SenderThread:1463011 [sender.py:send():379] send: stats
+2023-09-04 21:53:00,139 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:53:01,088 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:53:02,117 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:53:02,118 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:53:02,118 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:53:02,119 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:53:02,141 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:53:03,719 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-04 21:53:03,720 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: stop_status
+2023-09-04 21:53:04,960 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:53:04,961 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:53:04,961 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:53:04,962 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:53:05,142 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:53:06,123 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:53:07,729 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:53:07,731 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:53:07,732 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:53:07,732 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:53:08,144 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:53:10,548 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:53:10,550 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:53:10,551 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:53:10,551 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:53:11,125 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:53:11,127 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:53:11,128 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:53:11,128 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:53:11,129 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:53:11,145 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:53:12,855 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:53:12,857 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:53:12,857 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:53:12,858 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:53:13,145 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:53:13,146 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:53:14,551 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-04 21:53:14,553 DEBUG   SenderThread:1463011 [sender.py:send():379] send: metric
+2023-09-04 21:53:14,564 DEBUG   SenderThread:1463011 [sender.py:send():379] send: history
+2023-09-04 21:53:14,569 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: summary_record
+2023-09-04 21:53:14,573 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:53:14,625 DEBUG   SenderThread:1463011 [sender.py:send():379] send: telemetry
+2023-09-04 21:53:14,625 DEBUG   SenderThread:1463011 [sender.py:send():379] send: exit
+2023-09-04 21:53:14,625 INFO    SenderThread:1463011 [sender.py:send_exit():584] handling exit code: 0
+2023-09-04 21:53:14,625 INFO    SenderThread:1463011 [sender.py:send_exit():586] handling runtime: 164
+2023-09-04 21:53:14,626 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:53:14,626 INFO    SenderThread:1463011 [sender.py:send_exit():592] send defer
+2023-09-04 21:53:14,627 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:14,627 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 0
+2023-09-04 21:53:14,627 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:14,627 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 0
+2023-09-04 21:53:14,627 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 1
+2023-09-04 21:53:14,628 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:14,628 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 1
+2023-09-04 21:53:14,628 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:14,628 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 1
+2023-09-04 21:53:14,628 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 2
+2023-09-04 21:53:14,628 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:14,628 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 2
+2023-09-04 21:53:14,628 INFO    HandlerThread:1463011 [system_monitor.py:finish():190] Stopping system monitor
+2023-09-04 21:53:14,629 DEBUG   SystemMonitor:1463011 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-09-04 21:53:14,629 DEBUG   SystemMonitor:1463011 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-09-04 21:53:14,629 INFO    HandlerThread:1463011 [interfaces.py:finish():202] Joined cpu monitor
+2023-09-04 21:53:14,631 INFO    HandlerThread:1463011 [interfaces.py:finish():202] Joined disk monitor
+2023-09-04 21:53:14,855 INFO    HandlerThread:1463011 [interfaces.py:finish():202] Joined gpu monitor
+2023-09-04 21:53:14,856 INFO    HandlerThread:1463011 [interfaces.py:finish():202] Joined memory monitor
+2023-09-04 21:53:14,856 INFO    HandlerThread:1463011 [interfaces.py:finish():202] Joined network monitor
+2023-09-04 21:53:14,857 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:14,857 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 2
+2023-09-04 21:53:14,857 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 3
+2023-09-04 21:53:14,858 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:14,858 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 3
+2023-09-04 21:53:14,858 DEBUG   SenderThread:1463011 [sender.py:send():379] send: stats
+2023-09-04 21:53:14,859 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:14,860 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 3
+2023-09-04 21:53:14,860 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 4
+2023-09-04 21:53:14,860 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:14,860 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 4
+2023-09-04 21:53:14,860 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:14,861 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 4
+2023-09-04 21:53:14,861 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 5
+2023-09-04 21:53:14,861 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:14,861 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 5
+2023-09-04 21:53:14,862 DEBUG   SenderThread:1463011 [sender.py:send():379] send: summary
+2023-09-04 21:53:14,862 INFO    SenderThread:1463011 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-04 21:53:14,863 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:14,863 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 5
+2023-09-04 21:53:14,863 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 6
+2023-09-04 21:53:14,863 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:14,864 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 6
+2023-09-04 21:53:14,864 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:14,864 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 6
+2023-09-04 21:53:14,868 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: status_report
+2023-09-04 21:53:15,167 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 7
+2023-09-04 21:53:15,167 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:15,168 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 7
+2023-09-04 21:53:15,168 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:15,168 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 7
+2023-09-04 21:53:15,168 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/config.yaml
+2023-09-04 21:53:15,169 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:53:15,169 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:53:15,626 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-04 21:53:17,170 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:53:18,263 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 8
+2023-09-04 21:53:18,264 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: poll_exit
+2023-09-04 21:53:18,264 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:18,265 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 8
+2023-09-04 21:53:18,265 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:18,265 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 8
+2023-09-04 21:53:18,266 INFO    SenderThread:1463011 [job_builder.py:build():281] Attempting to build job artifact
+2023-09-04 21:53:18,267 INFO    SenderThread:1463011 [job_builder.py:_get_source_type():400] is repo sourced job
+2023-09-04 21:53:18,270 INFO    SenderThread:1463011 [job_builder.py:build():374] adding wandb-job metadata file
+2023-09-04 21:53:18,277 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 9
+2023-09-04 21:53:18,277 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:18,277 DEBUG   SenderThread:1463011 [sender.py:send():379] send: artifact
+2023-09-04 21:53:18,277 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 9
+2023-09-04 21:53:19,171 INFO    Thread-12 :1463011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:53:19,316 INFO    SenderThread:1463011 [sender.py:send_artifact():1475] sent artifact job-https___github.com_radarFudan_Curse-of-memory.git_src_train.py - {'id': 'QXJ0aWZhY3Q6NTU4OTUyODIz', 'digest': '424ec4f84e7eed19d6ac99ddc02edc99', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_radarFudan_Curse-of-memory.git_src_train.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_radarFudan_Curse-of-memory.git_src_train.py', 'alias': 'v26'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjg2MDY5NDI3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NTU4OTUyODIz', 'versionIndex': 26}}, 'version': 'v26'}
+2023-09-04 21:53:19,316 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:19,316 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 9
+2023-09-04 21:53:19,316 INFO    SenderThread:1463011 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-09-04 21:53:20,172 INFO    SenderThread:1463011 [dir_watcher.py:finish():388] scan: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files
+2023-09-04 21:53:20,173 INFO    SenderThread:1463011 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/conda-environment.yaml conda-environment.yaml
+2023-09-04 21:53:20,173 INFO    SenderThread:1463011 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-metadata.json wandb-metadata.json
+2023-09-04 21:53:20,173 INFO    SenderThread:1463011 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log output.log
+2023-09-04 21:53:20,179 INFO    SenderThread:1463011 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/config.yaml config.yaml
+2023-09-04 21:53:20,179 INFO    SenderThread:1463011 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json wandb-summary.json
+2023-09-04 21:53:20,180 INFO    SenderThread:1463011 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/requirements.txt requirements.txt
+2023-09-04 21:53:20,186 INFO    SenderThread:1463011 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/diff.patch diff.patch
+2023-09-04 21:53:20,196 INFO    SenderThread:1463011 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/code/src/train.py code/src/train.py
+2023-09-04 21:53:20,196 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 10
+2023-09-04 21:53:20,196 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:20,196 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 10
+2023-09-04 21:53:20,196 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:20,196 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 10
+2023-09-04 21:53:20,197 INFO    SenderThread:1463011 [file_pusher.py:finish():159] shutting down file pusher
+2023-09-04 21:53:20,627 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-04 21:53:20,783 INFO    wandb-upload_2:1463011 [upload_job.py:push():131] Uploaded file /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/output.log
+2023-09-04 21:53:20,812 INFO    wandb-upload_0:1463011 [upload_job.py:push():131] Uploaded file /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/conda-environment.yaml
+2023-09-04 21:53:20,814 INFO    wandb-upload_1:1463011 [upload_job.py:push():131] Uploaded file /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/wandb-summary.json
+2023-09-04 21:53:20,815 INFO    wandb-upload_3:1463011 [upload_job.py:push():131] Uploaded file /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/config.yaml
+2023-09-04 21:53:20,874 INFO    wandb-upload_4:1463011 [upload_job.py:push():131] Uploaded file /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/files/requirements.txt
+2023-09-04 21:53:21,074 INFO    Thread-11 :1463011 [sender.py:transition_state():612] send defer: 11
+2023-09-04 21:53:21,075 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:21,075 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 11
+2023-09-04 21:53:21,075 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:21,076 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 11
+2023-09-04 21:53:21,076 INFO    SenderThread:1463011 [file_pusher.py:join():164] waiting for file pusher
+2023-09-04 21:53:21,076 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 12
+2023-09-04 21:53:21,076 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:21,076 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 12
+2023-09-04 21:53:21,076 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:21,077 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 12
+2023-09-04 21:53:21,077 INFO    SenderThread:1463011 [file_stream.py:finish():593] file stream finish called
+2023-09-04 21:53:22,122 INFO    SenderThread:1463011 [file_stream.py:finish():597] file stream finish is done
+2023-09-04 21:53:22,123 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 13
+2023-09-04 21:53:22,123 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:22,123 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 13
+2023-09-04 21:53:22,123 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:22,124 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 13
+2023-09-04 21:53:22,124 INFO    SenderThread:1463011 [sender.py:transition_state():612] send defer: 14
+2023-09-04 21:53:22,124 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: defer
+2023-09-04 21:53:22,124 INFO    HandlerThread:1463011 [handler.py:handle_request_defer():170] handle defer: 14
+2023-09-04 21:53:22,125 DEBUG   SenderThread:1463011 [sender.py:send():379] send: final
+2023-09-04 21:53:22,125 DEBUG   SenderThread:1463011 [sender.py:send():379] send: footer
+2023-09-04 21:53:22,125 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: defer
+2023-09-04 21:53:22,125 INFO    SenderThread:1463011 [sender.py:send_request_defer():608] handle sender defer: 14
+2023-09-04 21:53:22,127 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-04 21:53:22,127 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: poll_exit
+2023-09-04 21:53:22,127 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: server_info
+2023-09-04 21:53:22,128 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: get_summary
+2023-09-04 21:53:22,129 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: sampled_history
+2023-09-04 21:53:22,133 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: job_info
+2023-09-04 21:53:22,134 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: server_info
+2023-09-04 21:53:22,354 DEBUG   SenderThread:1463011 [sender.py:send_request():406] send_request: job_info
+2023-09-04 21:53:22,355 DEBUG   HandlerThread:1463011 [handler.py:handle_request():144] handle_request: shutdown
+2023-09-04 21:53:22,355 INFO    HandlerThread:1463011 [handler.py:finish():861] shutting down handler
+2023-09-04 21:53:23,134 INFO    WriterThread:1463011 [datastore.py:close():294] close: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/wandb/run-20230904_215029-kejcpsrc/run-kejcpsrc.wandb
+2023-09-04 21:53:23,355 INFO    SenderThread:1463011 [sender.py:finish():1552] shutting down sender
+2023-09-04 21:53:23,355 INFO    SenderThread:1463011 [file_pusher.py:finish():159] shutting down file pusher
+2023-09-04 21:53:23,355 INFO    SenderThread:1463011 [file_pusher.py:join():164] waiting for file pusher

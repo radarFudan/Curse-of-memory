@@ -1,0 +1,150 @@
+CONFIG
+├── data
+│   └── _target_: src.data.lf_datamodule.LFDataModule                                                                   
+│       data_dir: /home/shida/Figure_1/data/                                                                            
+│       batch_size: 512                                                                                                 
+│       seq_length: 100                                                                                                 
+│       input_dim: 1                                                                                                    
+│       train_val_test_split:                                                                                           
+│       - 128000                                                                                                        
+│       - 12800                                                                                                         
+│       - 12800                                                                                                         
+│       num_workers: 1                                                                                                  
+│       pin_memory: false                                                                                               
+│       rho_name: pol                                                                                                   
+│                                                                                                                       
+├── model
+│   └── _target_: src.models.lf_module.LFLitModule                                                                      
+│       optimizer:                                                                                                      
+│         _target_: torch.optim.AdamW                                                                                   
+│         _partial_: true                                                                                               
+│         lr: 0.01                                                                                                      
+│         weight_decay: 0.0                                                                                             
+│       scheduler:                                                                                                      
+│         _target_: torch.optim.lr_scheduler.ReduceLROnPlateau                                                          
+│         _partial_: true                                                                                               
+│         mode: min                                                                                                     
+│         factor: 0.1                                                                                                   
+│         patience: 10                                                                                                  
+│       net:                                                                                                            
+│         _target_: src.models.recurrent.ssm.SSM                                                                        
+│         rec1_size: 32                                                                                                 
+│         return_sequences: true                                                                                        
+│         dt: 1.0                                                                                                       
+│         activation: tanh                                                                                              
+│       encoder:                                                                                                        
+│         _target_: src.models.encoders.linear.Linear                                                                   
+│         in_size: 1                                                                                                    
+│         out_size: 32                                                                                                  
+│       decoder:                                                                                                        
+│         _target_: src.models.decoders.linear.Linear                                                                   
+│         in_size: 32                                                                                                   
+│         out_size: 1                                                                                                   
+│                                                                                                                       
+├── callbacks
+│   └── model_checkpoint:                                                                                               
+│         _target_: lightning.pytorch.callbacks.ModelCheckpoint                                                         
+│         dirpath: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/checkpoints                           
+│         filename: epoch_{epoch:03d}                                                                                   
+│         monitor: val/loss                                                                                             
+│         verbose: false                                                                                                
+│         save_last: true                                                                                               
+│         save_top_k: 2                                                                                                 
+│         mode: min                                                                                                     
+│         auto_insert_metric_name: false                                                                                
+│         save_weights_only: false                                                                                      
+│         every_n_train_steps: null                                                                                     
+│         train_time_interval: null                                                                                     
+│         every_n_epochs: null                                                                                          
+│         save_on_train_epoch_end: null                                                                                 
+│       early_stopping:                                                                                                 
+│         _target_: lightning.pytorch.callbacks.EarlyStopping                                                           
+│         monitor: val/loss                                                                                             
+│         min_delta: 0.0                                                                                                
+│         patience: 1000                                                                                                
+│         verbose: true                                                                                                 
+│         mode: min                                                                                                     
+│         strict: true                                                                                                  
+│         check_finite: true                                                                                            
+│         stopping_threshold: 0.09874731302261353                                                                       
+│         divergence_threshold: null                                                                                    
+│         check_on_train_epoch_end: null                                                                                
+│       model_summary:                                                                                                  
+│         _target_: lightning.pytorch.callbacks.RichModelSummary                                                        
+│         max_depth: -1                                                                                                 
+│       rich_progress_bar:                                                                                              
+│         _target_: lightning.pytorch.callbacks.RichProgressBar                                                         
+│       gradient_norms:                                                                                                 
+│         _target_: src.callbacks.norms.TrackNorms                                                                      
+│                                                                                                                       
+├── logger
+│   └── csv:                                                                                                            
+│         _target_: lightning.pytorch.loggers.csv_logs.CSVLogger                                                        
+│         save_dir: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027                                      
+│         name: csv/                                                                                                    
+│         prefix: ''                                                                                                    
+│       tensorboard:                                                                                                    
+│         _target_: lightning.pytorch.loggers.tensorboard.TensorBoardLogger                                             
+│         save_dir: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027/tensorboard/                         
+│         name: null                                                                                                    
+│         log_graph: false                                                                                              
+│         default_hp_metric: true                                                                                       
+│         prefix: ''                                                                                                    
+│       wandb:                                                                                                          
+│         _target_: lightning.pytorch.loggers.wandb.WandbLogger                                                         
+│         name: LF_tanh_ssm_pol-D32                                                                                     
+│         save_dir: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027                                      
+│         offline: false                                                                                                
+│         id: null                                                                                                      
+│         anonymous: null                                                                                               
+│         project: Curse-of-memory                                                                                      
+│         log_model: false                                                                                              
+│         prefix: ''                                                                                                    
+│         group: lf                                                                                                     
+│         tags:                                                                                                         
+│         - lf                                                                                                          
+│         - ssm                                                                                                         
+│         job_type: ''                                                                                                  
+│       aim:                                                                                                            
+│         experiment: lf                                                                                                
+│                                                                                                                       
+├── trainer
+│   └── _target_: lightning.pytorch.trainer.Trainer                                                                     
+│       default_root_dir: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027                                
+│       min_epochs: 2                                                                                                   
+│       max_epochs: 1000                                                                                                
+│       accelerator: gpu                                                                                                
+│       devices: 1                                                                                                      
+│       check_val_every_n_epoch: 1                                                                                      
+│       deterministic: false                                                                                            
+│       precision: 64                                                                                                   
+│       gradient_clip_val: 0.5                                                                                          
+│                                                                                                                       
+├── paths
+│   └── root_dir: /home/shida/Figure_1                                                                                  
+│       data_dir: /home/shida/Figure_1/data/                                                                            
+│       log_dir: /home/shida/Figure_1/logs/                                                                             
+│       output_dir: /home/shida/Figure_1/logs/LF_tanh_ssm_pol/runs/20230904/215027                                      
+│       work_dir: /home/shida/Figure_1                                                                                  
+│                                                                                                                       
+├── extras
+│   └── ignore_warnings: false                                                                                          
+│       enforce_tags: true                                                                                              
+│       print_config: true                                                                                              
+│                                                                                                                       
+├── task_name
+│   └── LF_tanh_ssm_pol                                                                                                 
+├── tags
+│   └── ['lf', 'ssm']                                                                                                   
+├── train
+│   └── True                                                                                                            
+├── test
+│   └── True                                                                                                            
+├── compile
+│   └── False                                                                                                           
+├── ckpt_path
+│   └── None                                                                                                            
+├── seed
+│   └── 12345                                                                                                           
+└── optimized_metric
+    └── val/loss                                                                                                        

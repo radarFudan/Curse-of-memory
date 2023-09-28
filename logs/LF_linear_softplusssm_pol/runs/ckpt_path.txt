@@ -1,0 +1,4 @@
+/home/shida/Figure_1/logs/LF_linear_softplusssm_pol/runs/20230904/191232/checkpoints/epoch_001.ckpt
+/home/shida/Figure_1/logs/LF_linear_softplusssm_pol/runs/20230904/191356/checkpoints/epoch_002.ckpt
+/home/shida/Figure_1/logs/LF_linear_softplusssm_pol/runs/20230904/191612/checkpoints/epoch_016.ckpt
+/home/shida/Figure_1/logs/LF_linear_softplusssm_pol/runs/20230904/192406/checkpoints/epoch_023.ckpt

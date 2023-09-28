@@ -1,0 +1,527 @@
+2023-09-05 06:25:34,445 INFO    StreamThr :1963582 [internal.py:wandb_internal():86] W&B internal server running at pid: 1963582, started at: 2023-09-05 06:25:34.444242
+2023-09-05 06:25:34,448 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status
+2023-09-05 06:25:34,453 INFO    WriterThread:1963582 [datastore.py:open_for_write():85] open: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/run-7zghkwd7.wandb
+2023-09-05 06:25:34,454 DEBUG   SenderThread:1963582 [sender.py:send():379] send: header
+2023-09-05 06:25:34,472 DEBUG   SenderThread:1963582 [sender.py:send():379] send: run
+2023-09-05 06:25:34,477 INFO    SenderThread:1963582 [sender.py:_maybe_setup_resume():758] checking resume status for None/Curse-of-memory/7zghkwd7
+2023-09-05 06:25:35,309 INFO    SenderThread:1963582 [dir_watcher.py:__init__():211] watching files in: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files
+2023-09-05 06:25:35,309 INFO    SenderThread:1963582 [sender.py:_start_run_threads():1121] run started: 7zghkwd7 with start time 1693866334.443384
+2023-09-05 06:25:35,313 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:25:35,313 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:25:35,322 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: check_version
+2023-09-05 06:25:35,322 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: check_version
+2023-09-05 06:25:35,383 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: run_start
+2023-09-05 06:25:35,388 DEBUG   HandlerThread:1963582 [system_info.py:__init__():31] System info init
+2023-09-05 06:25:35,389 DEBUG   HandlerThread:1963582 [system_info.py:__init__():46] System info init done
+2023-09-05 06:25:35,389 INFO    HandlerThread:1963582 [system_monitor.py:start():181] Starting system monitor
+2023-09-05 06:25:35,389 INFO    SystemMonitor:1963582 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-09-05 06:25:35,390 INFO    HandlerThread:1963582 [system_monitor.py:probe():201] Collecting system info
+2023-09-05 06:25:35,390 INFO    SystemMonitor:1963582 [interfaces.py:start():190] Started cpu monitoring
+2023-09-05 06:25:35,392 INFO    SystemMonitor:1963582 [interfaces.py:start():190] Started disk monitoring
+2023-09-05 06:25:35,394 INFO    SystemMonitor:1963582 [interfaces.py:start():190] Started gpu monitoring
+2023-09-05 06:25:35,396 INFO    SystemMonitor:1963582 [interfaces.py:start():190] Started memory monitoring
+2023-09-05 06:25:35,396 INFO    SystemMonitor:1963582 [interfaces.py:start():190] Started network monitoring
+2023-09-05 06:25:35,451 DEBUG   HandlerThread:1963582 [system_info.py:probe():195] Probing system
+2023-09-05 06:25:35,460 DEBUG   HandlerThread:1963582 [system_info.py:_probe_git():180] Probing git
+2023-09-05 06:25:35,475 DEBUG   HandlerThread:1963582 [system_info.py:_probe_git():188] Probing git done
+2023-09-05 06:25:35,475 DEBUG   HandlerThread:1963582 [system_info.py:probe():240] Probing system done
+2023-09-05 06:25:35,475 DEBUG   HandlerThread:1963582 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-78-generic-x86_64-with-glibc2.31', 'python': '3.9.16', 'heartbeatAt': '2023-09-04T22:25:35.452067', 'startedAt': '2023-09-04T22:25:34.435129', 'docker': None, 'cuda': None, 'args': ('experiment=LF/lf-softplusssm', 'data.rho_name=pol', 'model.net.rec1_size=16', 'model.net.activation=hardtanh', 'task_name=LF_hardtanh_softplusssm_pol', 'callbacks.early_stopping.stopping_threshold=0.07025288790464401', 'logger=many_loggers'), 'state': 'running', 'program': '/home/shida/Figure_1/src/train.py', 'codePath': 'src/train.py', 'git': {'remote': 'https://github.com/radarFudan/Curse-of-memory.git', 'commit': 'da81b3bc431ecd55f98bad0066142a97867ae727'}, 'email': '25528016+radarFudan@users.noreply.github.com', 'root': '/home/shida/Figure_1', 'host': 'SMC', 'username': 'shida', 'executable': '/home/shida/anaconda3/envs/lh/bin/python', 'cpu_count': 16, 'cpu_count_logical': 32, 'cpu_freq': {'current': 1.0049062500000003, 'min': 800.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 0.9, 'min': 800.0, 'max': 4000.0}, {'current': 3.6, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 3.4, 'min': 800.0, 'max': 4000.0}, {'current': 1.2, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.9, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.9, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.89, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.9, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 1.0, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}, {'current': 0.9, 'min': 800.0, 'max': 4000.0}, {'current': 0.8, 'min': 800.0, 'max': 4000.0}], 'disk': {'total': 1758.8579597473145, 'used': 1320.8903503417969}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}], 'memory': {'total': 125.40912246704102}}
+2023-09-05 06:25:35,475 INFO    HandlerThread:1963582 [system_monitor.py:probe():211] Finished collecting system info
+2023-09-05 06:25:35,475 INFO    HandlerThread:1963582 [system_monitor.py:probe():214] Publishing system info
+2023-09-05 06:25:35,475 DEBUG   HandlerThread:1963582 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-09-05 06:25:35,476 DEBUG   HandlerThread:1963582 [system_info.py:_save_pip():67] Saving pip packages done
+2023-09-05 06:25:35,476 DEBUG   HandlerThread:1963582 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-09-05 06:25:36,315 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/requirements.txt
+2023-09-05 06:25:36,316 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:25:36,316 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/conda-environment.yaml
+2023-09-05 06:25:38,977 DEBUG   HandlerThread:1963582 [system_info.py:_save_conda():86] Saving conda packages done
+2023-09-05 06:25:38,978 DEBUG   HandlerThread:1963582 [system_info.py:_save_code():89] Saving code
+2023-09-05 06:25:38,990 DEBUG   HandlerThread:1963582 [system_info.py:_save_code():110] Saving code done
+2023-09-05 06:25:38,990 DEBUG   HandlerThread:1963582 [system_info.py:_save_patches():127] Saving git patches
+2023-09-05 06:25:39,075 DEBUG   HandlerThread:1963582 [system_info.py:_save_patches():169] Saving git patches done
+2023-09-05 06:25:39,076 INFO    HandlerThread:1963582 [system_monitor.py:probe():216] Finished publishing system info
+2023-09-05 06:25:39,082 DEBUG   SenderThread:1963582 [sender.py:send():379] send: files
+2023-09-05 06:25:39,082 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-09-05 06:25:39,083 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file code/src/train.py with policy now
+2023-09-05 06:25:39,083 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file diff.patch with policy now
+2023-09-05 06:25:39,099 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:25:39,105 DEBUG   SenderThread:1963582 [sender.py:send():379] send: telemetry
+2023-09-05 06:25:39,105 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:25:39,316 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/conda-environment.yaml
+2023-09-05 06:25:39,317 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-metadata.json
+2023-09-05 06:25:39,317 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/diff.patch
+2023-09-05 06:25:39,317 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/code/src/train.py
+2023-09-05 06:25:39,318 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/code/src
+2023-09-05 06:25:39,318 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/code
+2023-09-05 06:25:39,408 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:39,408 DEBUG   SenderThread:1963582 [sender.py:send():379] send: telemetry
+2023-09-05 06:25:39,409 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:39,409 WARNING SenderThread:1963582 [sender.py:send_metric():1326] Seen metric with glob (shouldn't happen)
+2023-09-05 06:25:39,412 DEBUG   SenderThread:1963582 [sender.py:send():379] send: config
+2023-09-05 06:25:39,980 INFO    wandb-upload_1:1963582 [upload_job.py:push():131] Uploaded file /tmp/tmpsrosigmrwandb/53ceoxfh-code/src/train.py
+2023-09-05 06:25:39,982 INFO    wandb-upload_0:1963582 [upload_job.py:push():131] Uploaded file /tmp/tmpsrosigmrwandb/olsk98v6-wandb-metadata.json
+2023-09-05 06:25:40,317 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_created():271] file/dir created: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:25:40,414 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:25:41,023 INFO    wandb-upload_2:1963582 [upload_job.py:push():131] Uploaded file /tmp/tmpsrosigmrwandb/061bdqex-diff.patch
+2023-09-05 06:25:42,319 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:25:43,502 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:25:43,504 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:43,505 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:43,505 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:25:43,506 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:25:43,506 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:25:44,320 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:25:44,321 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:25:45,470 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:25:46,321 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:25:48,322 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:25:49,354 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:25:49,360 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,360 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,360 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,361 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,361 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,361 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,361 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,361 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,362 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,362 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,362 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,362 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,362 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,362 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,362 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:25:49,363 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:25:49,363 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:25:49,364 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:25:50,324 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:25:50,325 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:25:50,508 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:25:52,325 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:25:53,207 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:25:53,209 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:25:53,210 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:25:53,210 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:25:53,326 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:25:54,108 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:25:54,109 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:25:54,327 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:25:55,512 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:25:56,329 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:25:57,064 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:25:57,067 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:25:57,068 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:25:57,068 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:25:57,329 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:25:58,330 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:00,333 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:00,578 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:01,095 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:01,097 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:01,098 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:01,099 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:01,333 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:02,334 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:04,335 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:05,184 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:05,187 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:05,187 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:05,187 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:05,336 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:05,588 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:05,810 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:05,906 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:05,906 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:05,906 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:06,336 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:06,337 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:06,337 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/config.yaml
+2023-09-05 06:26:08,338 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:09,107 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:26:09,109 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:26:09,994 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:09,997 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:09,997 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:09,999 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:10,339 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:10,942 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:14,016 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:14,018 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:14,019 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:14,023 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:14,343 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:15,999 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:18,177 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:18,180 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:18,181 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:18,185 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:18,360 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:21,044 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:22,164 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:22,167 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:22,167 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:22,171 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:22,363 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:24,107 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:26:24,108 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:26:24,366 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:26,111 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:26,135 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:26,137 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:26,138 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:26,139 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:26,367 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:26,367 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:26,793 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:26,796 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:26,796 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:26,797 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:27,368 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:28,368 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:30,370 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:30,777 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:30,778 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:30,778 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:30,779 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:31,169 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:31,371 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:34,755 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:34,758 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:34,758 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:34,759 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:35,373 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:35,397 DEBUG   SystemMonitor:1963582 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-09-05 06:26:35,400 DEBUG   SenderThread:1963582 [sender.py:send():379] send: stats
+2023-09-05 06:26:36,216 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:38,656 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:38,658 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:38,659 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:38,660 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:39,119 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:26:39,120 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:26:39,377 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:41,220 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:42,471 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:42,473 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:42,473 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:42,474 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:43,379 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:46,264 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:46,517 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:46,519 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:46,520 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:46,523 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:47,126 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:47,128 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:47,129 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:47,130 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:47,382 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:48,383 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:50,387 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:51,120 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:51,122 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:51,123 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:51,124 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:51,271 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:51,387 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:54,128 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:26:54,129 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:26:54,974 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:54,975 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:54,976 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:54,977 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:55,390 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:26:56,290 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:26:56,391 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:58,393 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:26:58,840 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:26:58,842 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:26:58,843 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:26:58,844 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:26:59,393 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:01,331 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:02,775 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:02,777 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:02,778 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:02,779 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:03,396 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:05,411 DEBUG   SenderThread:1963582 [sender.py:send():379] send: stats
+2023-09-05 06:27:06,368 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:06,716 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:06,719 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:06,719 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:06,720 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:07,342 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:07,344 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:07,345 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:07,346 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:07,412 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:08,412 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:27:09,127 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:27:09,128 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:27:10,414 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:27:11,248 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:11,251 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:11,251 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:11,252 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:11,392 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:11,414 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:14,997 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:15,000 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:15,000 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:15,001 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:15,417 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:16,405 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:18,738 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:18,739 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:18,740 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:18,744 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:19,420 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:21,405 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:22,582 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:22,585 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:22,586 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:22,587 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:23,432 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:24,127 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:27:24,127 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:27:26,415 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:26,431 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:26,433 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:26,434 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:26,436 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:26,436 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:27,050 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:27,052 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:27,053 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:27,054 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:27,436 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:28,437 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:27:30,438 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:27:31,043 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:31,045 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:31,046 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:31,047 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:31,420 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:31,439 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:34,870 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:34,873 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:34,873 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:34,874 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:35,412 DEBUG   SenderThread:1963582 [sender.py:send():379] send: stats
+2023-09-05 06:27:35,442 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:36,483 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:38,843 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:38,846 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:38,846 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:38,847 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:39,145 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:27:39,146 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:27:39,445 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:41,487 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:42,741 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:42,744 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:42,744 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:42,748 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:43,448 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:46,566 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:46,673 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:46,675 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:46,676 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:46,677 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:47,318 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:47,339 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:47,340 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:47,341 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:47,450 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:48,451 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:27:50,452 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:27:51,365 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:51,368 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:51,369 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:51,370 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:51,453 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:51,601 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:54,142 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:27:54,143 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:27:55,302 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:55,304 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:55,305 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:55,309 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:55,456 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:27:56,608 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:27:59,140 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:27:59,143 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:27:59,143 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:27:59,144 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:27:59,459 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:28:01,628 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:28:02,979 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:28:02,982 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:28:02,983 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:28:02,984 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:28:03,462 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:28:05,415 DEBUG   SenderThread:1963582 [sender.py:send():379] send: stats
+2023-09-05 06:28:06,701 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:28:06,721 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:28:06,723 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:28:06,724 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:28:06,725 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:28:07,298 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:28:07,300 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:28:07,301 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:28:07,302 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:28:07,474 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:28:08,475 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:28:09,071 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:28:09,073 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:28:09,073 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:28:09,074 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:28:09,145 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-05 06:28:09,146 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: stop_status
+2023-09-05 06:28:09,475 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:28:10,476 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:28:11,025 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-05 06:28:11,030 DEBUG   SenderThread:1963582 [sender.py:send():379] send: metric
+2023-09-05 06:28:11,030 DEBUG   SenderThread:1963582 [sender.py:send():379] send: history
+2023-09-05 06:28:11,031 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: summary_record
+2023-09-05 06:28:11,031 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:28:11,092 DEBUG   SenderThread:1963582 [sender.py:send():379] send: telemetry
+2023-09-05 06:28:11,093 DEBUG   SenderThread:1963582 [sender.py:send():379] send: exit
+2023-09-05 06:28:11,093 INFO    SenderThread:1963582 [sender.py:send_exit():584] handling exit code: 0
+2023-09-05 06:28:11,093 INFO    SenderThread:1963582 [sender.py:send_exit():586] handling runtime: 155
+2023-09-05 06:28:11,094 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:28:11,095 INFO    SenderThread:1963582 [sender.py:send_exit():592] send defer
+2023-09-05 06:28:11,095 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:11,095 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 0
+2023-09-05 06:28:11,096 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:11,096 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 0
+2023-09-05 06:28:11,096 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 1
+2023-09-05 06:28:11,096 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:11,096 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 1
+2023-09-05 06:28:11,097 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:11,097 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 1
+2023-09-05 06:28:11,097 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 2
+2023-09-05 06:28:11,097 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:11,097 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 2
+2023-09-05 06:28:11,097 INFO    HandlerThread:1963582 [system_monitor.py:finish():190] Stopping system monitor
+2023-09-05 06:28:11,097 DEBUG   SystemMonitor:1963582 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-09-05 06:28:11,097 DEBUG   SystemMonitor:1963582 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-09-05 06:28:11,100 INFO    HandlerThread:1963582 [interfaces.py:finish():202] Joined cpu monitor
+2023-09-05 06:28:11,101 INFO    HandlerThread:1963582 [interfaces.py:finish():202] Joined disk monitor
+2023-09-05 06:28:11,325 INFO    HandlerThread:1963582 [interfaces.py:finish():202] Joined gpu monitor
+2023-09-05 06:28:11,325 INFO    HandlerThread:1963582 [interfaces.py:finish():202] Joined memory monitor
+2023-09-05 06:28:11,325 INFO    HandlerThread:1963582 [interfaces.py:finish():202] Joined network monitor
+2023-09-05 06:28:11,326 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:11,326 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 2
+2023-09-05 06:28:11,326 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 3
+2023-09-05 06:28:11,327 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:11,327 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 3
+2023-09-05 06:28:11,327 DEBUG   SenderThread:1963582 [sender.py:send():379] send: stats
+2023-09-05 06:28:11,329 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:11,329 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 3
+2023-09-05 06:28:11,329 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 4
+2023-09-05 06:28:11,329 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:11,329 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 4
+2023-09-05 06:28:11,330 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:11,330 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 4
+2023-09-05 06:28:11,330 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 5
+2023-09-05 06:28:11,330 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:11,330 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 5
+2023-09-05 06:28:11,331 DEBUG   SenderThread:1963582 [sender.py:send():379] send: summary
+2023-09-05 06:28:11,332 INFO    SenderThread:1963582 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-05 06:28:11,333 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:11,333 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 5
+2023-09-05 06:28:11,333 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 6
+2023-09-05 06:28:11,333 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:11,333 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 6
+2023-09-05 06:28:11,334 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:11,334 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 6
+2023-09-05 06:28:11,339 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: status_report
+2023-09-05 06:28:11,477 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:28:11,665 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 7
+2023-09-05 06:28:11,665 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:11,665 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 7
+2023-09-05 06:28:11,666 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:11,666 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 7
+2023-09-05 06:28:12,093 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-05 06:28:12,477 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:28:12,478 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/config.yaml
+2023-09-05 06:28:13,614 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 8
+2023-09-05 06:28:13,614 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: poll_exit
+2023-09-05 06:28:13,614 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:13,615 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 8
+2023-09-05 06:28:13,616 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:13,616 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 8
+2023-09-05 06:28:13,616 INFO    SenderThread:1963582 [job_builder.py:build():281] Attempting to build job artifact
+2023-09-05 06:28:13,617 INFO    SenderThread:1963582 [job_builder.py:_get_source_type():400] is repo sourced job
+2023-09-05 06:28:13,619 INFO    SenderThread:1963582 [job_builder.py:build():374] adding wandb-job metadata file
+2023-09-05 06:28:13,626 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 9
+2023-09-05 06:28:13,626 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:13,626 DEBUG   SenderThread:1963582 [sender.py:send():379] send: artifact
+2023-09-05 06:28:13,626 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 9
+2023-09-05 06:28:14,479 INFO    Thread-12 :1963582 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:28:14,679 INFO    SenderThread:1963582 [sender.py:send_artifact():1475] sent artifact job-https___github.com_radarFudan_Curse-of-memory.git_src_train.py - {'id': 'QXJ0aWZhY3Q6NTU4OTUyODIz', 'digest': '424ec4f84e7eed19d6ac99ddc02edc99', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_radarFudan_Curse-of-memory.git_src_train.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_radarFudan_Curse-of-memory.git_src_train.py', 'alias': 'v26'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjg2MDY5NDI3', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NTU4OTUyODIz', 'versionIndex': 26}}, 'version': 'v26'}
+2023-09-05 06:28:14,679 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:14,679 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 9
+2023-09-05 06:28:14,680 INFO    SenderThread:1963582 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-09-05 06:28:15,480 INFO    SenderThread:1963582 [dir_watcher.py:finish():388] scan: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files
+2023-09-05 06:28:15,481 INFO    SenderThread:1963582 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/conda-environment.yaml conda-environment.yaml
+2023-09-05 06:28:15,481 INFO    SenderThread:1963582 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-metadata.json wandb-metadata.json
+2023-09-05 06:28:15,481 INFO    SenderThread:1963582 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log output.log
+2023-09-05 06:28:15,482 INFO    SenderThread:1963582 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/config.yaml config.yaml
+2023-09-05 06:28:15,482 INFO    SenderThread:1963582 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json wandb-summary.json
+2023-09-05 06:28:15,482 INFO    SenderThread:1963582 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/requirements.txt requirements.txt
+2023-09-05 06:28:15,482 INFO    SenderThread:1963582 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/diff.patch diff.patch
+2023-09-05 06:28:15,483 INFO    SenderThread:1963582 [dir_watcher.py:finish():402] scan save: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/code/src/train.py code/src/train.py
+2023-09-05 06:28:15,483 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 10
+2023-09-05 06:28:15,484 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:15,484 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 10
+2023-09-05 06:28:15,494 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:15,494 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 10
+2023-09-05 06:28:15,496 INFO    SenderThread:1963582 [file_pusher.py:finish():159] shutting down file pusher
+2023-09-05 06:28:16,075 INFO    wandb-upload_0:1963582 [upload_job.py:push():131] Uploaded file /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/conda-environment.yaml
+2023-09-05 06:28:16,089 INFO    wandb-upload_1:1963582 [upload_job.py:push():131] Uploaded file /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/wandb-summary.json
+2023-09-05 06:28:16,099 INFO    wandb-upload_2:1963582 [upload_job.py:push():131] Uploaded file /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/requirements.txt
+2023-09-05 06:28:16,277 INFO    wandb-upload_4:1963582 [upload_job.py:push():131] Uploaded file /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/config.yaml
+2023-09-05 06:28:17,009 INFO    wandb-upload_3:1963582 [upload_job.py:push():131] Uploaded file /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/files/output.log
+2023-09-05 06:28:17,094 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-05 06:28:17,210 INFO    Thread-11 :1963582 [sender.py:transition_state():612] send defer: 11
+2023-09-05 06:28:17,211 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:17,211 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 11
+2023-09-05 06:28:17,212 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:17,212 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 11
+2023-09-05 06:28:17,212 INFO    SenderThread:1963582 [file_pusher.py:join():164] waiting for file pusher
+2023-09-05 06:28:17,212 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 12
+2023-09-05 06:28:17,212 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:17,213 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 12
+2023-09-05 06:28:17,213 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:17,213 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 12
+2023-09-05 06:28:17,214 INFO    SenderThread:1963582 [file_stream.py:finish():593] file stream finish called
+2023-09-05 06:28:17,501 INFO    SenderThread:1963582 [file_stream.py:finish():597] file stream finish is done
+2023-09-05 06:28:17,502 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 13
+2023-09-05 06:28:17,502 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:17,502 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 13
+2023-09-05 06:28:17,503 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:17,503 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 13
+2023-09-05 06:28:17,503 INFO    SenderThread:1963582 [sender.py:transition_state():612] send defer: 14
+2023-09-05 06:28:17,504 DEBUG   SenderThread:1963582 [sender.py:send():379] send: final
+2023-09-05 06:28:17,505 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: defer
+2023-09-05 06:28:17,505 DEBUG   SenderThread:1963582 [sender.py:send():379] send: footer
+2023-09-05 06:28:17,505 INFO    HandlerThread:1963582 [handler.py:handle_request_defer():170] handle defer: 14
+2023-09-05 06:28:17,506 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: defer
+2023-09-05 06:28:17,506 INFO    SenderThread:1963582 [sender.py:send_request_defer():608] handle sender defer: 14
+2023-09-05 06:28:17,508 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-05 06:28:17,508 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: server_info
+2023-09-05 06:28:17,508 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: get_summary
+2023-09-05 06:28:17,508 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: sampled_history
+2023-09-05 06:28:17,510 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: job_info
+2023-09-05 06:28:17,511 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: poll_exit
+2023-09-05 06:28:17,512 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: server_info
+2023-09-05 06:28:17,736 DEBUG   SenderThread:1963582 [sender.py:send_request():406] send_request: job_info
+2023-09-05 06:28:17,739 DEBUG   HandlerThread:1963582 [handler.py:handle_request():144] handle_request: shutdown
+2023-09-05 06:28:17,739 INFO    HandlerThread:1963582 [handler.py:finish():861] shutting down handler
+2023-09-05 06:28:18,511 INFO    WriterThread:1963582 [datastore.py:close():294] close: /home/shida/Figure_1/logs/LF_hardtanh_softplusssm_pol/runs/20230905/062532/wandb/run-20230905_062534-7zghkwd7/run-7zghkwd7.wandb
+2023-09-05 06:28:18,737 INFO    SenderThread:1963582 [sender.py:finish():1552] shutting down sender
+2023-09-05 06:28:18,737 INFO    SenderThread:1963582 [file_pusher.py:finish():159] shutting down file pusher
+2023-09-05 06:28:18,738 INFO    SenderThread:1963582 [file_pusher.py:join():164] waiting for file pusher
