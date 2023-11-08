@@ -42,6 +42,7 @@ def log_hyperparameters(object_dict: dict) -> None:
     hparams["extras"] = cfg.get("extras")
 
     hparams["task_name"] = cfg.get("task_name")
+    # hparams["logger/wandb/id"] = cfg.get("task_name")
     hparams["tags"] = cfg.get("tags")
     hparams["ckpt_path"] = cfg.get("ckpt_path")
     hparams["seed"] = cfg.get("seed")

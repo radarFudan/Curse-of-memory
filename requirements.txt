@@ -11,7 +11,7 @@ hydra-colorlog==1.2.0
 hydra-optuna-sweeper==1.2.0
 
 # --------- loggers --------- #
-# wandb
+wandb
 # neptune-client
 # mlflow
 # comet-ml
@@ -28,3 +28,5 @@ matplotlib      # for plotting
 ipykernel
 einops
 pandas
+
+tensorboardX
