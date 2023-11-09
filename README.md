@@ -135,30 +135,41 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 
 ## Future plan
 
-
 1. Add state-space model, [S4](https://github.com/HazyResearch/state-spaces), [LRU](https://arxiv.org/abs/2303.06349).
 2. Add RNN variants such as [AntisymmetricRNN](https://github.com/KurochkinAlexey/AntisymmetricRNN), [CoRNN](https://github.com/tk-rusch/coRNN), [LEM](https://github.com/tk-rusch/LEM).
 3. Add [temporal convolutional networks](https://github.com/locuslab/TCN) (TCN and Ckconv).
-4. 4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. Need associative scan implementation for the dataset generation.
-5. Docker image creation - delayed.
-6. There is a trade-off between approximation and stability, might need better method to achieve approximation and then maximized the stability.
+4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. Need associative scan implementation for the dataset generation.
+5. Docker image creation.
+6. There is a trade-off between approximation and stability, might need better optimization methods to achieve approximation and then maximized the stability.
 
 ## Refs
 
-### Curse of memory / stable approximation / memory functions
+### Curse of memory / memory functions / stable approximation
 
 ```bibtex
 @misc{wang2023inverse,
-      title={Inverse Approximation Theory for Nonlinear Recurrent Neural Networks},
-      author={Shida Wang and Zhong Li and Qianxiao Li},
-      year={2023},
-      eprint={2305.19190},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+    title={Inverse Approximation Theory for Nonlinear Recurrent Neural Networks},
+    author={Shida Wang and Zhong Li and Qianxiao Li},
+    year={2023},
+    eprint={2305.19190},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
 }
 ```
 
-### Survey on sequence modelling from approximation theory
+### State-space models
+```bibtex
+@inproceedings{
+    wang2023statespace,
+    title={State-space models with layer-wise nonlinearity are universal approximators with exponential decaying memory},
+    author={Shida Wang and Beichen Xue},
+    booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+    year={2023},
+    url={https://openreview.net/forum?id=i0OmcF14Kf}
+}
+```
+
+### Survey on sequence modelling for approximation theory
 
 ```bibtex
 @Article{JML-2-1,
@@ -176,24 +187,3 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
     url = {http://global-sci.org/intro/article_detail/jml/21511.html}
 }
 ```
-
-### State-space models
-
-The S4 model was developed by Albert Gu, Karan Goel, and Christopher Ré.
-If you find the S4 model useful, please cite their impressive paper:
-
-```bibtex
-@misc{gu2021efficiently,
-    title={Efficiently Modeling Long Sequences with Structured State Spaces},
-    author={Gu, Albert and Goel, Karan and R{\'e}, Christopher},
-    year={2021},
-    eprint={2111.00396},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
-}
-```
-
-Also consider checking out their fantastic repository at [github.com/HazyResearch/state-spaces](https://github.com/HazyResearch/state-spaces).
-
-
-The [S5](https://github.com/lindermanlab/S5) model is implemented in jax and performance over wikitext-103 is great when combined with hyena architecture.

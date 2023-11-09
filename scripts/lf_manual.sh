@@ -17,16 +17,16 @@ do
 
             rec1_size_list=("8" "16" "32" "64")
             metric_value=("100")
+            trained=True
             ckpt_path_file="${log_dir_path}/ckpt_path.txt"
-            echo "clean up ckpt_path_file and metric_value"
-            echo -n > "$ckpt_path_file"
-            echo -n > "${log_dir_path}/metric_value.txt"
-            trained=False
-
             gpu_index=0
 
             if [ "$trained" = False ]
             then
+                echo "clean up ckpt_path_file and metric_value"
+                echo -n > "$ckpt_path_file"
+                echo -n > "${log_dir_path}/metric_value.txt"
+
                 for i in "${!rec1_size_list[@]}"
                 do
                     CUDA_VISIBLE_DEVICES=$gpu_index python src/train.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}" callbacks.early_stopping.stopping_threshold="${metric_value[-1]}" logger=many_loggers
@@ -51,7 +51,7 @@ do
 
             for i in "${!ckpt_path[@]}"
             do
-                CUDA_VISIBLE_DEVICES=$gpu_index python src/perturb.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}_PERTURB" logger=many_loggers ckpt_path="${ckpt_path[$i]}" +model.net.training=False +perturb_range=21 +perturb_repeats=3 +perturbation_interval=0.5
+                CUDA_VISIBLE_DEVICES=$gpu_index python src/perturb.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}_PERTURB" logger=many_loggers ckpt_path="${ckpt_path[$i]}" +model.net.training=False +perturb_range=21 +perturb_repeats=30 +perturbation_interval=0.5
             done
         done
     done

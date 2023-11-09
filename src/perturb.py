@@ -127,7 +127,8 @@ def evaluate(cfg: DictConfig) -> Tuple[dict, dict]:
                 """
 
                 if "W" in name:
-                    noise = -torch.ones_like(param)
+                    noise = torch.randn_like(param)
+                    # noise = -torch.ones_like(param)
                     noise = noise / torch.norm(noise, p=float("inf")) * perturbation_scale
                     param.data = param.data + noise
                 else:
@@ -140,9 +141,6 @@ def evaluate(cfg: DictConfig) -> Tuple[dict, dict]:
 
             metric = trainer.test(model=model, datamodule=datamodule)
             previous_error = max(previous_error, metric[0]["test/loss"])
-
-            # if previous_error > 1e3:
-            #     break
 
         perturbation_error.append(previous_error)
 

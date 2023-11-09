@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 setup(
     name="src",
     version="0.0.1",
-    description="Curse-of-memory in RNNs",
+    description="Curse-of-memory in Nonlinear RNNs",
     author="Wang Shida",
     author_email="e0622338@u.nus.edu",
     url="https://github.com/radarFudan/Curse-of-memory",
