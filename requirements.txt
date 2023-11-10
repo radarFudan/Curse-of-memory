@@ -1,8 +1,8 @@
 # --------- pytorch --------- #
-torch>=2.0.0
-torchvision>=0.15.0
-lightning>=2.1.0
-torchmetrics>=0.11.4
+torch==2.0.1
+torchvision==0.15.2
+lightning==2.0.2
+torchmetrics==0.11.4
 
 # --------- hydra --------- #
 hydra-core==1.3.2
@@ -10,7 +10,7 @@ hydra-colorlog==1.2.0
 hydra-optuna-sweeper==1.2.0
 
 # --------- loggers --------- #
-wandb
+wandb==0.15.8
 # neptune-client
 # mlflow
 # comet-ml
@@ -25,7 +25,7 @@ sh              # for running bash commands in some tests (linux/macos only)
 
 matplotlib      # for plotting
 ipykernel
-einops
+einops==0.6.1
 pandas
 
-tensorboardX
+tensorboardX==2.6.2

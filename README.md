@@ -140,6 +140,8 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 3. Add [temporal convolutional networks](https://github.com/locuslab/TCN) (TCN and Ckconv).
 4. Current sequence length support is around 200. Improve the dataset preparation code so larger sequence length (1000+) can be tested. Need associative scan implementation for the dataset generation.
 5. Docker image creation.
+    docker run -it --gpus=all shida_com:v2
+    python -c "import torch; print(torch.cuda.is_available())" 
 6. There is a trade-off between approximation and stability, might need better optimization methods to achieve approximation and then maximized the stability.
 
 ## Refs
