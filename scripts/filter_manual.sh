@@ -1,23 +1,27 @@
 #!/bin/bash
 
+rm -rf /home/shida/Code/Curse-of-memory/data/filter*
+rm -rf /home/shida/Code/Curse-of-memory/logs/Filter_hardtanh_diagonalrnn_rnn*
+
 activation_list=("hardtanh") # recurrent activation
 model_list=("diagonalrnn") # parameterization method
-rho_name_list=("exp")
+# target_name_list=("rnn" "transformer")
+target_name_list=("rnn")
 
 for activation in "${activation_list[@]}"
 do
     for model in "${model_list[@]}"
     do
-        for rho_name in "${rho_name_list[@]}"
+        for target_name in "${target_name_list[@]}"
         do
-            experiment="LF/lf-${model}"
+            experiment="Filter/filter-${model}"
 
-            task_name="LF_${activation}_${model}_${rho_name}"
+            task_name="Filter_${activation}_${model}_${target_name}"
             log_dir_path="logs/${task_name}/runs"
 
             rec1_size_list=("8" "16" "32" "64")
             metric_value=("100")
-            trained=True
+            trained=False
             ckpt_path_file="${log_dir_path}/ckpt_path.txt"
             gpu_index=0
 
@@ -29,7 +33,7 @@ do
 
                 for i in "${!rec1_size_list[@]}"
                 do
-                    CUDA_VISIBLE_DEVICES=$gpu_index python src/train.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}" callbacks.early_stopping.stopping_threshold="${metric_value[-1]}" logger=many_loggers
+                    CUDA_VISIBLE_DEVICES=$gpu_index python src/train.py experiment="${experiment}" data.target_name="${target_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}" callbacks.early_stopping.stopping_threshold="${metric_value[-1]}" logger=many_loggers
 
                     metric_value+=("$(cat "${log_dir_path}/metric_value.txt")")
                     echo "Ensure approximation: "
@@ -51,7 +55,7 @@ do
 
             for i in "${!ckpt_path[@]}"
             do
-                CUDA_VISIBLE_DEVICES=$gpu_index python src/perturb.py experiment="${experiment}" data.rho_name="${rho_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}_PERTURB" logger=many_loggers ckpt_path="${ckpt_path[$i]}" +model.net.training=False +perturb_range=21 +perturb_repeats=30 +perturbation_interval=0.5
+                CUDA_VISIBLE_DEVICES=$gpu_index python src/perturb.py experiment="${experiment}" data.target_name="${target_name}" model.net.rec1_size="${rec1_size_list[$i]}" model.net.activation="${activation}" task_name="${task_name}_PERTURB" logger=many_loggers ckpt_path="${ckpt_path[$i]}" +model.net.training=False +perturb_range=21 +perturb_repeats=3 +perturbation_interval=0.5
             done
         done
     done

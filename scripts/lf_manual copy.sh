@@ -2,7 +2,7 @@
 
 activation_list=("hardtanh") # recurrent activation
 model_list=("diagonalrnn") # parameterization method
-rho_name_list=("exp")
+rho_name_list=("pol")
 
 for activation in "${activation_list[@]}"
 do
@@ -17,7 +17,7 @@ do
 
             rec1_size_list=("8" "16" "32" "64")
             metric_value=("100")
-            trained=True
+            trained=False
             ckpt_path_file="${log_dir_path}/ckpt_path.txt"
             gpu_index=0
 

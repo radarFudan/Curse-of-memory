@@ -1,0 +1,39 @@
+# @package _global_
+defaults:
+  - override /callbacks: default.yaml
+  - override /trainer: default.yaml
+  - override /data: filter.yaml
+
+seed: 12345
+task_name: "Filter"
+
+data:
+  batch_size: 512
+  target_name: "rnn"
+tags: ["filter"]
+
+trainer:
+  min_epochs: 2 # Previous set to 1, some might not have suitable stability margin
+  max_epochs: 1000
+  gradient_clip_val: 0.5
+
+callbacks:
+  model_checkpoint:
+    monitor: "val/loss"
+    mode: "min"
+
+  early_stopping:
+    monitor: "val/loss"
+    patience: 1000
+    verbose: True # verbosity mode
+    mode: "min"
+    # stopping_threshold: 1e-6
+
+logger:
+  wandb:
+    tags: ${tags}
+    group: "filter"
+  aim:
+    experiment: "filter"
+
+optimized_metric: "val/loss"
