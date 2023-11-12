@@ -40,19 +40,36 @@ def Filter_generate(
 
             # TODO
             # Construct rnn or attention with linear bias based on the target
-            hidden_size=256
-            model = torch.nn.RNN(input_dim, hidden_size=hidden_size, num_layers=1, batch_first=True, dtype=torch.float64)
+            hidden_size=16
+
+            if target_name == "rnn":
+                model = torch.nn.RNN(input_dim, hidden_size=hidden_size, num_layers=1, batch_first=True, dtype=torch.float64)
+            elif target_name == "transformer":
+                model = torch.nn.TransformerDecoder(torch.nn.TransformerDecoderLayer(d_model=hidden_size, dim_feedforward=hidden_size*2, nhead=1, dtype=torch.float64), num_layers=1)
+            else:
+                raise NotImplementedError
+
+            readin = torch.nn.Linear(input_dim, hidden_size, dtype=torch.float64)
             readout = torch.nn.Linear(hidden_size, input_dim, dtype=torch.float64)
+
+
+            query_inputs = np.zeros((1, seq_length, input_dim))
             
-            output_reshaped, _ = model(torch.tensor(inputs))
+            if target_name == "rnn":
+                output_reshaped, _ = model(torch.tensor(inputs))
+                query_outputs, _ = model(torch.tensor(query_inputs))
+            elif target_name == "transformer":
+                output_reshaped = model(readin(torch.tensor(inputs)), readin(torch.tensor(inputs)))
+                query_outputs = model(readin(torch.tensor(query_inputs)), readin(torch.tensor(query_inputs)))
+            else:
+                raise NotImplementedError
+
             output_reshaped = readout(output_reshaped)
 
             np.save(input_file_path, inputs)
             np.save(output_file_path, output_reshaped.detach().numpy())
 
-            query_inputs = np.zeros((1, seq_length, input_dim))
             query_inputs[0, 0, :] = 1
-            query_outputs, _ = model(torch.tensor(query_inputs))
             query_outputs = readout(query_outputs)
             np.save(memory_file_path, query_outputs.detach().numpy())
 

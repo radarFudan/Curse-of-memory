@@ -3,6 +3,6 @@ data_dir: ${paths.data_dir}
 batch_size: 128
 seq_length: 100
 input_dim: 1
-train_val_test_split: [128_00, 12_80, 12_80]
-num_workers: 4
+train_val_test_split: [128_0, 12_8, 12_8]
+num_workers: 1
 pin_memory: False

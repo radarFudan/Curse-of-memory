@@ -78,6 +78,7 @@ class FilterDataModule(LightningDataModule):
         # Prepare the dictionary of rho functions
         self.rhos = {
             "rnn": None,
+            "transformer": None
         }
 
     def prepare_data(self):
