@@ -80,6 +80,7 @@ def Filter_generate(
             plt.plot(query_outputs_squeezed_memory)
             plt.yscale("log")
             plt.savefig(data_dir + f"filter_{target_name}_memory.png")
+            plt.savefig(data_dir + f"filter_{target_name}_memory.pdf")
             plt.close()
 
 
