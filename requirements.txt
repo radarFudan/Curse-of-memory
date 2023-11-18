@@ -25,7 +25,7 @@ sh              # for running bash commands in some tests (linux/macos only)
 
 matplotlib      # for plotting
 ipykernel
-einops==0.6.1
+einops==0.7.0
 pandas
 
 tensorboardX==2.6.2.2
