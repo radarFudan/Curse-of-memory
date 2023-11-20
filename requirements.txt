@@ -10,7 +10,7 @@ hydra-colorlog==1.2.0
 hydra-optuna-sweeper==1.2.0
 
 # --------- loggers --------- #
-wandb==0.15.8
+wandb==0.16.0
 # neptune-client
 # mlflow
 # comet-ml
