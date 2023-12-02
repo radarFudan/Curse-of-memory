@@ -175,7 +175,7 @@ python src/perturb.py experiment=Lf/lf-rnn.yaml
 
 ```bibtex
 @Article{JML-2-1,
-    author = {Jiang , HaotianLi , QianxiaoLi , Zhong and Wang , Shida},
+    author = {Haotian Jiang and Qianxiao Li and Zhong Li and Shida Wang},
     title = {A Brief Survey on the Approximation Theory for Sequence Modelling},
     journal = {Journal of Machine Learning},
     year = {2023},
