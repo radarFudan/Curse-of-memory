@@ -52,14 +52,13 @@ We show that the commonly-used activations (hardtanh and tanh) do not directly r
 
 We'll designate the parameterizations that accommodate long-term memory as stable parameterizations.
 
-| Parameterisation        | Exponential decay | Polynomial decay |
-| ----------------------- | ----------------- | ---------------- |
-| Diagonal RNN            | Stable            | Unstable         |
-| Vanilla RNN             | Stable            | Unstable         |
-| State space model       | Stable            | Unstable         |
-| Linear Recurrent Unit   | Stable            | Unstable         |
-| Stable Parameterisation | Stable            | Stable           |
-| S4                      | Stable            | Stable           |
+| Parameterisation          | Exponential decay | Polynomial decay |
+| ------------------------- | ----------------- | ---------------- |
+| Diagonal RNN              | Stable            | Unstable         |
+| Vanilla RNN               | Stable            | Unstable         |
+| State-space model         | Stable            | Unstable         |
+| Linear Recurrent Unit     | Stable            | Unstable         |
+| Stable Reparameterisation | Stable            | Stable           |
 
 |                                                  Vanilla RNN                                                  |                                                      Stable Parameterisation                                                      |
 | :-----------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------: |
