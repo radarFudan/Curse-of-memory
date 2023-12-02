@@ -133,13 +133,13 @@ conda activate curse_of_memory
 ## How to train
 
 ```bash
-python src/train.py experiment=Lf/lf-rnn.yaml
+python src/train.py experiment=LF/lf-rnn.yaml
 ```
 
 ### Perturbation error evaluation
 
 ```bash
-python src/perturb.py experiment=Lf/lf-rnn.yaml
+python src/perturb.py experiment=LF/lf-rnn.yaml
 ```
 
 ## Future plan
