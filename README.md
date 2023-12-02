@@ -71,18 +71,28 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 ### RNNs
 
 Discrete-time case:
-$$h_{k+1} = h_k + \Delta t\sigma(Wh_k+Ux_k+b).$$
+$$h_{k+1} = h_k + \Delta t\sigma(Wh_k+Ux_k+b)$$
 
 $$y_k = c^\top h_k$$
 
 Continuous-time case:
-$$\frac{dh_{t}}{dt} = \sigma(Wh_t+Ux_t+b).$$
+$$\frac{dh_{t}}{dt} = \sigma(Wh_t+Ux_t+b)$$
 
 $$y_t = c^\top h_t$$
 
 ### SSMs
 
 The state-space models we are talking about refer to the linear RNNs with layer-wise nonlinear activations.
+
+Discrete-time case:
+$$h_{k+1} = Wh_k+Ux_k+b$$
+
+$$y_k = c^\top \sigma(h_k)$$
+
+Continuous-time case:
+$$\frac{dh_{t}}{dt} = Wh_t+Ux_t+b$$
+
+$$y_t = c^\top \sigma(h_t)$$
 
 
 
