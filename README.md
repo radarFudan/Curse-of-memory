@@ -73,6 +73,8 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 Discrete-time case:
 $$h_{k+1} = h_k + \Delta t\sigma(Wh_k+Ux_k+b).$$
 
+$$y_k = c^\top h_k$$
+
 Continuous-time case:
 $$\frac{dh_{t}}{dt} = \sigma(Wh_t+Ux_t+b).$$
 
