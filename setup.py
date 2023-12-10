@@ -17,6 +17,7 @@ setup(
             "train_command = src.train:main",
             "eval_command = src.eval:main",
             "perturb_command = src.perturb:main",
+            "memoryfunction = src.memoryfunction:memoryfunction",
         ]
     },
 )

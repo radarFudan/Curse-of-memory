@@ -17,6 +17,7 @@
 ## Description
 
 In this paper, we study RNNs' curse of memory phenomenon.
+<!-- Then a problem would be what is curse of memory.  -->
 It is shown that, simply adding nonlinear activations such as hardtanh and tanh does not relax the curse.
 Using stable reparameterisation such as exp parameterisation and softplus parameterisation can relax the curse of memory and achieve stable approximation for long-term memories.
 
@@ -130,25 +131,11 @@ conda env create -f environment.yaml -n curse_of_memory
 conda activate curse_of_memory
 ```
 
-## How to train
-
-```bash
-python src/train.py experiment=LF/lf-rnn.yaml
-```
-
-### Perturbation error evaluation
-
-```bash
-python src/perturb.py experiment=LF/lf-rnn.yaml
-```
-
-## Future plan
-
 
 
 ## Refs
 
-### Curse of memory phenomneon / definition of memory functions / concept of stable approximation
+#### Curse of memory phenomneon / definition of memory functions / concept of stable approximation
 
 ```bibtex
 @misc{wang2023inverse,
@@ -161,7 +148,7 @@ python src/perturb.py experiment=LF/lf-rnn.yaml
 }
 ```
 
-### Extension to state-space models
+#### Extension to state-space models
 ```bibtex
 @inproceedings{
     wang2023statespace,
@@ -181,7 +168,7 @@ python src/perturb.py experiment=LF/lf-rnn.yaml
 }
 ```
 
-### Survey on sequence modelling from approximation perspective
+#### Survey on sequence modelling from approximation perspective
 
 ```bibtex
 @Article{JML-2-1,
