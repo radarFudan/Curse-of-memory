@@ -9,15 +9,15 @@
 [![Paper](http://img.shields.io/badge/paper-arxiv.2305.19190-B31B1B.svg)](https://arxiv.org/abs/2305.19190)
 [![Paper](http://img.shields.io/badge/paper-arxiv.2309.13414-B31B1B.svg)](https://arxiv.org/abs/2309.13414)
 [![Paper](http://img.shields.io/badge/paper-arxiv.2311.14495-B31B1B.svg)](https://arxiv.org/abs/2311.14495)
-
-<!-- [![Conference](http://img.shields.io/badge/AnyConference-year-4b44ce.svg)](https://papers.nips.cc/paper/2023) -->
+[![Conference](http://img.shields.io/badge/NeurIPS-2023-4b44ce.svg)](https://papers.nips.cc/paper/2023)
+[![Conference](http://img.shields.io/badge/ICLR-2024-4b44ce.svg)](https://openreview.net/forum?id=yC2waD70Vj)
 
 </div>
 
 ## Description
 
-In this paper, we study RNNs' curse of memory phenomenon.
-<!-- Then a problem would be what is curse of memory.  -->
+Curse of memory refers to the difficulty of learning long-term memory using recurrent models. 
+In this paper, we study nonlinear RNNs' curse of memory phenomenon.
 It is shown that, simply adding nonlinear activations such as hardtanh and tanh does not relax the curse.
 Using stable reparameterisation such as exp parameterisation and softplus parameterisation can relax the curse of memory and achieve stable approximation for long-term memories.
 

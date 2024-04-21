@@ -7,7 +7,7 @@ setup(
     version="0.0.1",
     description="Curse-of-memory in Nonlinear RNNs",
     author="Wang Shida",
-    author_email="e0622338@u.nus.edu",
+    author_email="wsd0525wsd@gmail.com",
     url="https://github.com/radarFudan/Curse-of-memory",
     install_requires=["lightning", "hydra-core"],
     packages=find_packages(),
