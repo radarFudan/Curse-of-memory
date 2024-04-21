@@ -17,6 +17,7 @@
 ## Description
 
 Curse of memory refers to the difficulty of learning long-term memory using recurrent models. 
+Although recurrent models benefit from low inference costs, this curse restricts their effectiveness for tasks involving long sequences.
 In this paper, we study nonlinear RNNs' curse of memory phenomenon.
 It is shown that, simply adding nonlinear activations such as hardtanh and tanh does not relax the curse.
 Using stable reparameterisation such as exp parameterisation and softplus parameterisation can relax the curse of memory and achieve stable approximation for long-term memories.
@@ -69,31 +70,41 @@ We'll designate the parameterizations that accommodate long-term memory as stabl
 
 ## Models
 
-### RNNs
+### Nonlinear RNNs
 
 Discrete-time case:
-$$h_{k+1} = h_k + \Delta t\sigma(Wh_k+Ux_k+b)$$
+$$h_{k+1} = h_k + \Delta t \mathbf{\sigma}(Wh_k+Ux_k+b)$$
 
 $$y_k = c^\top h_k$$
 
 Continuous-time case:
-$$\frac{dh_{t}}{dt} = \sigma(Wh_t+Ux_t+b)$$
+$$\frac{dh_{t}}{dt} = \mathbf{\sigma}(Wh_t+Ux_t+b)$$
 
 $$y_t = c^\top h_t$$
 
 ### SSMs
 
-The state-space models we are talking about refer to the linear RNNs with layer-wise nonlinear activations.
+State-space models refer to the linear RNNs with layer-wise nonlinear activations.
 
 Discrete-time case:
 $$h_{k+1} = Wh_k+Ux_k+b$$
 
-$$y_k = c^\top \sigma(h_k)$$
+$$y_k = c^\top \mathbf{\sigma}(h_k)$$
 
 Continuous-time case:
 $$\frac{dh_{t}}{dt} = Wh_t+Ux_t+b$$
 
-$$y_t = c^\top \sigma(h_t)$$
+$$y_t = c^\top \mathbf{\sigma}(h_t)$$
+
+### StableSSM
+
+State-space models refer to the linear RNNs with layer-wise nonlinear activations.
+
+Discrete-time case:
+$$h_{k+1} = \Lambda h_k+Ux_k+b$$
+
+$$\Lambda = f(W)$$
+$W$ is the trainable weight. $f$ can be exponential/softplus/inverse parameterization.
 
 
 
@@ -105,46 +116,32 @@ $$y_t = c^\top \sigma(h_t)$$
 # clone project
 git clone https://github.com/radarFudan/Curse-of-memory
 cd Curse-of-memory
-
-# [OPTIONAL] create conda environment
-conda create -n curse_of_memory python=3.9
-conda activate curse_of_memory
-
-# install pytorch according to instructions
-# https://pytorch.org/get-started/
-
-# install requirements
+conda create -n CoM python=3.10
+conda activate CoM
 pip install -r requirements.txt
 ```
-
-#### Conda
-
-```bash
-# clone project
-git clone https://github.com/radarFudan/Curse-of-memory
-cd Curse-of-memory
-
-# create conda environment and install dependencies
-conda env create -f environment.yaml -n curse_of_memory
-
-# activate conda environment
-conda activate curse_of_memory
-```
-
 
 
 ## Refs
 
-#### Curse of memory phenomneon / definition of memory functions / concept of stable approximation
+#### Curse of memory phenomenon / definition of memory function and stable approximation
 
 ```bibtex
-@misc{wang2023inverse,
+@inproceedings{
+    wang2024inverse,
     title={Inverse Approximation Theory for Nonlinear Recurrent Neural Networks},
     author={Shida Wang and Zhong Li and Qianxiao Li},
-    year={2023},
-    eprint={2305.19190},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
+    booktitle={The Twelfth International Conference on Learning Representations},
+    year={2024},
+    url={https://openreview.net/forum?id=yC2waD70Vj}
+}
+@inproceedings{
+    li2021on,
+    title={On the Curse of Memory in Recurrent Neural Networks: Approximation and Optimization Analysis},
+    author={Zhong Li and Jiequn Han and Weinan E and Qianxiao Li},
+    booktitle={International Conference on Learning Representations},
+    year={2021},
+    url={https://openreview.net/forum?id=8Sqhl-nF50}
 }
 ```
 
