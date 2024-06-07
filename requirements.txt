@@ -10,7 +10,7 @@ hydra-colorlog==1.2.0
 hydra-optuna-sweeper==1.2.0
 
 # --------- loggers --------- #
-wandb==0.17.0
+wandb==0.17.1
 
 # --------- others --------- #
 pyrootutils     # standardizing the project root setup
